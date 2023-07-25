@@ -492,7 +492,7 @@ class DoppelGANger(object):
                 time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
                 f.write("epoch {} starts: {}\n".format(epoch, time))
 
-            for batch_idx, (real_attribute, real_feature) in enumerate(loader):
+            for batch_idx, (real_attribute, real_feature) in tqdm(enumerate(loader), total=len(loader)):
 
                 real_attribute = real_attribute.to(self.device)
                 real_feature = real_feature.to(self.device)
