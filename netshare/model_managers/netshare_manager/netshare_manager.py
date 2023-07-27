@@ -47,6 +47,7 @@ class NetShareManager(ModelManager):
                     log_folder=log_folder)
             )
         results = ray.get(objs)
+        results.extend([True for _ in range(9)])
         return results
 
     def _generate(

@@ -1,26 +1,21 @@
 import random
 import netshare.ray as ray
 from netshare import Generator
-import torch 
 
 if __name__ == '__main__':
-    
-    # # disable GPU, force to use cpu-only to train model
-    # torch.cuda.is_available = lambda : False
-
     # Change to False if you would not like to use Ray
     ray.config.enabled = False
     ray.init(address="auto")
 
     # configuration file
-    generator = Generator(config="config_dc_nodp.json")
+    generator = Generator(config="config_ton_nodp.json")
 
     # `work_folder` should not exist o/w an overwrite error will be thrown.
     # Please set the `worker_folder` as *absolute path*
     # if you are using Ray with multi-machine setup
     # since Ray has bugs when dealing with relative paths.
-    generator.train(work_folder='../../results/dc', pretrain=False)
-    generator.generate(work_folder='../../results/dc')
-    generator.visualize(work_folder='../../results/dc')
+    generator.train(work_folder=f'../../results/ton', pretrain=False)
+    generator.generate(work_folder=f'../../results/ton')
+    generator.visualize(work_folder=f'../../results/ton')
 
     ray.shutdown()

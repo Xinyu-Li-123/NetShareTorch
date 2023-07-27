@@ -1,17 +1,28 @@
 {
     "global_config": {
-        "original_data_file": "../../traces/dc/raw.pcap",
+        "original_data_file": "../../traces/cidds/raw.csv",
         "overwrite": true,
-        "dataset_type": "pcap",
+        "dataset_type": "netflow",
         "n_chunks": 10,
         "dp": false
     },
     "default": "single_event_per_row.json",
+    "model_manager": {
+        "class": "NetShareManager",
+        "config": {
+            "pretrain_dir": null,
+            "skip_chunk0_train": true,
+            "pretrain_non_dp": true,
+            "pretrain_non_dp_reduce_time": 4.0,
+            "pretrain_dp": false,
+            "run": 0
+        }
+    },
     "pre_post_processor": {
         "class": "NetsharePrePostProcessor",
         "config": {
             "timestamp": {
-                "column": "time",
+                "column": "ts",
                 "generation": true,
                 "encoding": "interarrival",
                 "normalization": "ZERO_ONE"
@@ -55,47 +66,27 @@
             ],
             "timeseries": [
                 {
-                    "column": "pkt_len",
-                    "type": "float",
-                    "normalization": "ZERO_ONE"
-                },
-                {
-                    "column": "tos",
+                    "column": "td",
                     "type": "float",
                     "normalization": "ZERO_ONE",
-                    "min_x": 0.0,
-                    "max_x": 255.0
+                    "log1p_norm": true
                 },
                 {
-                    "column": "id",
+                    "column": "pkt",
                     "type": "float",
                     "normalization": "ZERO_ONE",
-                    "min_x": 0.0,
-                    "max_x": 65535.0
+                    "log1p_norm": true
                 },
                 {
-                    "column": "flag",
-                    "type": "integer",
-                    "encoding": "categorical",
-                    "choices": [
-                        0,
-                        1,
-                        2
-                    ]
-                },
-                {
-                    "column": "off",
+                    "column": "byt",
                     "type": "float",
                     "normalization": "ZERO_ONE",
-                    "min_x": 0.0,
-                    "max_x": 8191.0
+                    "log1p_norm": true
                 },
                 {
-                    "column": "ttl",
-                    "type": "float",
-                    "normalization": "ZERO_ONE",
-                    "min_x": 0.0,
-                    "max_x": 255.0
+                    "column": "type",
+                    "type": "string",
+                    "encoding": "categorical"
                 }
             ]
         }
@@ -103,13 +94,13 @@
     "model": {
         "class": "DoppelGANgerTorchModel",
         "config": {
-            "batch_size": 32,
+            "batch_size": 512,
             "sample_len": [
                 5
             ],
             "sample_len_expand": true,
             "epochs": 1000,
-            "extra_checkpoint_freq": 10000,
+            "extra_checkpoint_freq": 50000,
             "epoch_checkpoint_freq": 200
         }
     }

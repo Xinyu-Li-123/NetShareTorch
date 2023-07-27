@@ -174,15 +174,16 @@ class Generator(object):
               f'{self._get_post_processed_data_folder(work_folder)}')
         return True
 
-    def train(self, work_folder):
+    def train(self, work_folder, preprocess=True):
         work_folder = os.path.expanduser(work_folder)
-        # if not self._pre_process(
-        #         input_folder=self._ori_data_path,
-        #         output_folder=self._get_pre_processed_data_folder(work_folder),
-        #         log_folder=self._get_pre_processed_data_log_folder(
-        #             work_folder)):
-        #     print('Failed to pre-process data')
-        #     return False
+        if preprocess:
+            if not self._pre_process(
+                    input_folder=self._ori_data_path,
+                    output_folder=self._get_pre_processed_data_folder(work_folder),
+                    log_folder=self._get_pre_processed_data_log_folder(
+                        work_folder)):
+                print('Failed to pre-process data')
+                return False
         if not self._train(
                 input_train_data_folder=self._get_pre_processed_data_folder(
                     work_folder),
