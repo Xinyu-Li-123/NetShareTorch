@@ -179,8 +179,10 @@ def _merge_attr(
 
     print("Saving merged attrs...")
     n_merged_attrs = 0
+    chunk_num_flow = []
     for chunkid, attr_clean in dict_chunkid_attr.items():
         print("chunk {}: {} flows".format(chunkid, len(attr_clean)))
+        chunk_num_flow.append(len(attr_clean))
         n_merged_attrs += len(attr_clean)
         np.savez(
             os.path.join(
@@ -188,6 +190,13 @@ def _merge_attr(
             data_attribute=np.asarray(attr_clean),
             data_attribute_discrete=np.asarray(
                 dict_chunkid_attr_discrete[chunkid]))
+    
+    # find all chunks with 0 flows and raise error
+    chunk_num_flow = np.asarray(chunk_num_flow)
+    if np.any(chunk_num_flow == 0):
+        raise ValueError("The chunks below have 0 flows!\n\t{}".format(
+            np.where(chunk_num_flow == 0)[0]
+        ))
 
     print("n_merged_attrs:", n_merged_attrs)
 

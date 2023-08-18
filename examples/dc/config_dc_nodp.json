@@ -7,6 +7,17 @@
         "dp": false
     },
     "default": "single_event_per_row.json",
+    "model_manager": {
+        "class": "NetShareManager",
+        "config": {
+            "pretrain_dir": null,
+            "skip_chunk0_train": true,
+            "pretrain_non_dp": true,
+            "pretrain_non_dp_reduce_time": 4.0,
+            "pretrain_dp": false,
+            "run": 0
+        }
+    },
     "pre_post_processor": {
         "class": "NetsharePrePostProcessor",
         "config": {
@@ -103,14 +114,14 @@
     "model": {
         "class": "DoppelGANgerTorchModel",
         "config": {
-            "batch_size": 32,
+            "batch_size": 40,
             "sample_len": [
                 5
             ],
             "sample_len_expand": true,
-            "epochs": 1000,
+            "epochs": 200,
             "extra_checkpoint_freq": 10000,
-            "epoch_checkpoint_freq": 200
+            "epoch_checkpoint_freq": 40
         }
     }
 }

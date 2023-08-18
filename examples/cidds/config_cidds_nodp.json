@@ -11,7 +11,7 @@
         "class": "NetShareManager",
         "config": {
             "pretrain_dir": null,
-            "skip_chunk0_train": true,
+            "skip_chunk0_train": false,
             "pretrain_non_dp": true,
             "pretrain_non_dp_reduce_time": 4.0,
             "pretrain_dp": false,
@@ -94,14 +94,14 @@
     "model": {
         "class": "DoppelGANgerTorchModel",
         "config": {
-            "batch_size": 512,
+            "batch_size": 1024,
             "sample_len": [
                 5
             ],
             "sample_len_expand": true,
-            "epochs": 1000,
+            "epochs": 2000,
             "extra_checkpoint_freq": 50000,
-            "epoch_checkpoint_freq": 200
+            "epoch_checkpoint_freq": 400
         }
     }
 }

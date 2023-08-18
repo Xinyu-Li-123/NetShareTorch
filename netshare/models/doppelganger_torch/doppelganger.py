@@ -118,8 +118,9 @@ class DoppelGANger(object):
 
         self.MODEL_NAME = "model"
 
-        self.device = torch.device(
-            "cuda" if torch.cuda.is_available() else "cpu")
+        # self.device = torch.device(
+        #     "cuda" if torch.cuda.is_available() else "cpu")
+        self.device = "cpu"
 
         if self.max_sequence_len % self.sample_len != 0:
             raise Exception("length must be a multiple of sample_len")
@@ -292,7 +293,7 @@ class DoppelGANger(object):
         if not os.path.exists(model_path):
             raise Exception("Directory to load pytorch model doesn't exist")
 
-        state = torch.load(model_path)
+        state = torch.load(model_path, map_location=self.device)
         self.generator.load_state_dict(state["generator_state_dict"])
         self.discriminator.load_state_dict(state["discriminator_state_dict"])
 
@@ -493,6 +494,7 @@ class DoppelGANger(object):
                 f.write("epoch {} starts: {}\n".format(epoch, time))
 
             for batch_idx, (real_attribute, real_feature) in tqdm(enumerate(loader), total=len(loader)):
+            # for batch_idx, (real_attribute, real_feature) in enumerate(loader):
 
                 real_attribute = real_attribute.to(self.device)
                 real_feature = real_feature.to(self.device)

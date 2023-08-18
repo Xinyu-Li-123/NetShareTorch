@@ -174,7 +174,7 @@ class Generator(object):
               f'{self._get_post_processed_data_folder(work_folder)}')
         return True
 
-    def train(self, work_folder, preprocess=True):
+    def train(self, work_folder, preprocess=True, train=True):
         work_folder = os.path.expanduser(work_folder)
         if preprocess:
             if not self._pre_process(
@@ -184,13 +184,14 @@ class Generator(object):
                         work_folder)):
                 print('Failed to pre-process data')
                 return False
-        if not self._train(
-                input_train_data_folder=self._get_pre_processed_data_folder(
-                    work_folder),
-                output_model_folder=self._get_model_folder(work_folder),
-                log_folder=self._get_model_log_folder(work_folder)):
-            print('Failed to train the model')
-            return False
+        if train:
+            if not self._train(
+                    input_train_data_folder=self._get_pre_processed_data_folder(
+                        work_folder),
+                    output_model_folder=self._get_model_folder(work_folder),
+                    log_folder=self._get_model_log_folder(work_folder)):
+                print('Failed to train the model')
+                return False
         return True
 
     def train_and_generate(self, work_folder):
@@ -201,7 +202,7 @@ class Generator(object):
             return False
         return True
 
-    def visualize(self, work_folder):
+    def visualize(self, work_folder, port=8050):
         work_folder = os.path.expanduser(work_folder)
         os.makedirs(self._get_visualization_folder(work_folder), exist_ok=True)
         real_data = pd.read_csv(
@@ -223,11 +224,16 @@ class Generator(object):
             filename for filename in syn_data_list
             if f'id-{largest_id}.csv' in filename][0]
         print(
-            f'The filename with the largest ID is: {filename_with_largest_id}')
-        synthetic_data = pd.read_csv(os.path.join(
+            f'The filename with the largest ID is: {filename_with_largest_id}')\
+
+        syn_csv_path = os.path.join(
             self._get_post_processed_data_folder(work_folder),
             filename_with_largest_id
-        ))
+            # "syn.csv"
+        )
+
+        print(f'Visualizing synthetic trace: {syn_csv_path}')
+        synthetic_data = pd.read_csv(syn_csv_path)
 
         # Visualize the real data and synthetic data
         pre_post_processor_config = Config(self._config["global_config"])
@@ -241,4 +247,4 @@ class Generator(object):
             config_dict=sdmetrics_config['config'])
         my_report.generate(real_data[synthetic_data.columns], synthetic_data,
                            sdmetrics_config['metadata'])
-        my_report.visualize()
+        my_report.visualize(port=port)

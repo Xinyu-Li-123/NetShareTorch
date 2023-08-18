@@ -195,9 +195,18 @@ class Word2VecField(Field):
     def denormalize(self, norm_x):
         # load Annoy and Dict
         type_ann = AnnoyIndex(self.word2vec_size, 'angular')
-        type_ann.load(os.path.join(
-            self.preprocessed_data_folder,
-            f"{self.word2vec_type}_ann.ann"))
+        try:
+            type_ann.load(os.path.join(
+                self.preprocessed_data_folder,
+                f"{self.word2vec_type}_ann.ann"))
+        except OSError:
+            print("The following annoy file does not exist: \n\t{}\npwd is\n\t{}".format(
+                os.path.join(
+                    self.preprocessed_data_folder,
+                    f"{self.word2vec_type}_ann.ann"), 
+                os.getcwd()
+            ))
+            exit()
         with open(os.path.join(self.preprocessed_data_folder, f"{self.word2vec_type}_dict.json"), 'r') as f:
             type_dict = json.load(f)
 

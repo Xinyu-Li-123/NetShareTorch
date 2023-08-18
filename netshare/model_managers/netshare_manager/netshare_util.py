@@ -17,6 +17,10 @@ def _load_config(config_dict, input_train_data_folder, output_model_folder):
         if os.path.exists(dataset_folder) and os.path.isdir(dataset_folder):
             config_pre_expand["dataset"].append(dataset_folder)
             n_valid_chunks += 1
+            print("Chunk {} is valid".format(chunk_id))
+        else:
+            print("Chunk {} is invalid\n\tpwd: {}\n\tdataset_folder: {}, exist: {}, isdir: {}".format(
+                chunk_id, os.getcwd(), dataset_folder, os.path.exists(dataset_folder), os.path.isdir(dataset_folder)))
     config_pre_expand["n_chunks"] = n_valid_chunks
     print("Number of valid chunks:", config_pre_expand["n_chunks"])
 
