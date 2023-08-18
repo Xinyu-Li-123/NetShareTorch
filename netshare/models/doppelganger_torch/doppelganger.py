@@ -473,25 +473,26 @@ class DoppelGANger(object):
             persistent_workers=True,
         )
         iteration = 0
-        loss_dict = {
-            "g_loss_d": 0.0,
-            "g_loss": 0.0,
-            "d_loss_fake": 0.0,
-            "d_loss_real": 0.0,
-            "d_loss_gp": 0.0,
-            "d_loss": 0.0,
-        }
-        if self.use_attr_discriminator:
-            loss_dict["g_loss_attr_d"] = 0.0
-            loss_dict["attr_d_loss_fake"] = 0.0
-            loss_dict["attr_d_loss_real"] = 0.0
-            loss_dict["attr_d_loss_gp"] = 0.0
-            loss_dict["attr_d_loss"] = 0.0
 
         for epoch in tqdm(range(self.epochs)):
             with open(self.time_path, "a") as f:
                 time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
                 f.write("epoch {} starts: {}\n".format(epoch, time))
+            
+            loss_dict = {
+                "g_loss_d": [],
+                "g_loss": [],
+                "d_loss_fake": [],
+                "d_loss_real": [],
+                "d_loss_gp": [],
+                "d_loss": [],
+            }
+            if self.use_attr_discriminator:
+                loss_dict["g_loss_attr_d"] = []
+                loss_dict["attr_d_loss_fake"] = []
+                loss_dict["attr_d_loss_real"] = []
+                loss_dict["attr_d_loss_gp"] = []
+                loss_dict["attr_d_loss"] = []
 
             for batch_idx, (real_attribute, real_feature) in tqdm(enumerate(loader), total=len(loader)):
             # for batch_idx, (real_attribute, real_feature) in enumerate(loader):
@@ -581,10 +582,10 @@ class DoppelGANger(object):
                     dis_loss.backward(retain_graph=True)
                     self.opt_discriminator.step()
 
-                    loss_dict["d_loss_fake"] = dis_loss_fake
-                    loss_dict["d_loss_real"] = dis_loss_real
-                    loss_dict["d_loss_gp"] = dis_loss_gp
-                    loss_dict["d_loss"] = dis_loss
+                    loss_dict["d_loss_fake"].append(dis_loss_fake.item())
+                    loss_dict["d_loss_real"].append(dis_loss_real.item())
+                    loss_dict["d_loss_gp"].append(dis_loss_gp.item())
+                    loss_dict["d_loss"].append(dis_loss.item())
 
                     if self.use_attr_discriminator:
                         attr_dis_real = self.attr_discriminator(
@@ -616,10 +617,10 @@ class DoppelGANger(object):
                         attr_dis_loss.backward(retain_graph=True)
                         self.opt_attr_discriminator.step()
 
-                        loss_dict["attr_d_loss_fake"] = attr_dis_loss_fake
-                        loss_dict["attr_d_loss_real"] = attr_dis_loss_real
-                        loss_dict["attr_d_loss_gp"] = attr_dis_loss_gp
-                        loss_dict["attr_d_loss"] = attr_dis_loss
+                        loss_dict["attr_d_loss_fake"].append(attr_dis_loss_fake.item())
+                        loss_dict["attr_d_loss_real"].append(attr_dis_loss_real.item())
+                        loss_dict["attr_d_loss_gp"].append(attr_dis_loss_gp.item())
+                        loss_dict["attr_d_loss"].append(attr_dis_loss.item())
 
                 for _ in range(self.g_rounds):
                     dis_fake = self.discriminator(
@@ -638,14 +639,14 @@ class DoppelGANger(object):
                     gen_loss.backward()
                     self.opt_generator.step()
 
-                    loss_dict["g_loss_d"] = gen_loss_dis
+                    loss_dict["g_loss_d"].append(gen_loss_dis.item())
                     if self.use_attr_discriminator:
-                        loss_dict["g_loss_attr_d"] = gen_loss_attr_dis
-                    loss_dict["g_loss"] = gen_loss
-
-                self._write_losses(loss_dict, iteration)
+                        loss_dict["g_loss_attr_d"].append(gen_loss_attr_dis.item())
+                    loss_dict["g_loss"].append(gen_loss.item())
 
                 iteration += 1
+            
+            self._write_losses(loss_dict, epoch)
 
             if (epoch + 1) % self.epoch_checkpoint_freq == 0:
                 ckpt_path = os.path.join(
@@ -699,32 +700,32 @@ class DoppelGANger(object):
 
     def _write_losses(self, loss_dict, iteration):
 
-        self.writer.add_scalar("loss/g/d", loss_dict["g_loss_d"], iteration)
+        self.writer.add_scalar("loss/g/d", np.mean(loss_dict["g_loss_d"]), iteration)
         if self.use_attr_discriminator:
             self.writer.add_scalar(
-                "loss/g/attr_d", loss_dict["g_loss_attr_d"], iteration
+                "loss/g/attr_d", np.mean(loss_dict["g_loss_attr_d"]), iteration
             )
-        self.writer.add_scalar("loss/g", loss_dict["g_loss"], iteration)
+        self.writer.add_scalar("loss/g", np.mean(loss_dict["g_loss"]), iteration)
 
         self.writer.add_scalar(
-            "loss/d/fake", loss_dict["d_loss_fake"],
+            "loss/d/fake", np.mean(loss_dict["d_loss_fake"]),
             iteration)
         self.writer.add_scalar(
-            "loss/d/real", loss_dict["d_loss_real"],
+            "loss/d/real", np.mean(loss_dict["d_loss_real"]),
             iteration)
-        self.writer.add_scalar("loss/d/gp", loss_dict["d_loss_gp"], iteration)
-        self.writer.add_scalar("loss/d", loss_dict["d_loss"], iteration)
+        self.writer.add_scalar("loss/d/gp", np.mean(loss_dict["d_loss_gp"]), iteration)
+        self.writer.add_scalar("loss/d", np.mean(loss_dict["d_loss"]), iteration)
 
         if self.use_attr_discriminator:
             self.writer.add_scalar(
-                "loss/attr_d/fake", loss_dict["attr_d_loss_fake"], iteration
+                "loss/attr_d/fake", np.mean(loss_dict["attr_d_loss_fake"]), iteration
             )
             self.writer.add_scalar(
-                "loss/attr_d/real", loss_dict["attr_d_loss_real"], iteration
+                "loss/attr_d/real", np.mean(loss_dict["attr_d_loss_real"]), iteration
             )
             self.writer.add_scalar(
-                "loss/attr_d/gp", loss_dict["attr_d_loss_gp"], iteration
+                "loss/attr_d/gp", np.mean(loss_dict["attr_d_loss_gp"]), iteration
             )
             self.writer.add_scalar(
-                "loss/attr_d", loss_dict["attr_d_loss"],
+                "loss/attr_d", np.mean(loss_dict["attr_d_loss"]),
                 iteration)
