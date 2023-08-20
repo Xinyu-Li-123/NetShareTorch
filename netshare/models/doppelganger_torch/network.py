@@ -4,6 +4,10 @@ from torch.autograd import Variable
 import torch.nn.functional as F
 from netshare.utils import Output, OutputType, Normalization
 
+def BatchNorm1dPrint(num_features, eps, momentum, *args, **kwargs):
+    print("BatchNorm1dPrint: num_features={}, eps={}, momentum={}".format(
+        num_features.shape, eps, momentum))
+    return torch.nn.BatchNorm1d(num_features, eps, momentum, *args, **kwargs)
 
 class AttrDiscriminator(torch.nn.Module):
     def __init__(
@@ -288,12 +292,12 @@ class DoppelGANgerGenerator(torch.nn.Module):
                     self.feature_outputs[i % feature_len].normalization
                     == Normalization.RELU
                 ):
-                    # ReLU, then batch norm
+                    # ReLU, but not batch norm b/c its effect on RNN is unclear
                     feature_out_layer.append(torch.nn.ReLU())
-                    feature_out_layer.append(
-                        torch.nn.BatchNorm1d(
-                            num_features=self.feature_outputs[i % feature_len].dim, eps=1e-5, momentum=0.9,
-                        ))
+                    # feature_out_layer.append(
+                    #     torch.nn.BatchNorm1d(
+                    #         num_features=self.feature_outputs[i % feature_len].dim, eps=1e-5, momentum=0.9,
+                    #     ))
                 else:
                     raise ValueError("Unknown normalization type: {}".format(
                         self.feature_outputs[i % feature_len].normalization))
@@ -352,6 +356,8 @@ class DoppelGANgerGenerator(torch.nn.Module):
             )
 
             for attr_layer in self.real_attribute_gen_last_layer:
+                # print("\nattr_layer:\n\t{}\nreal_attr_shape: {}".format(
+                #     type(attr_layer), real_attribute_gen_tmp.shape))
                 attr_sub_output = attr_layer(real_attribute_gen_tmp)
                 if isinstance(attr_layer[-1], torch.nn.Softmax):
                     attr_sub_output_discrete = F.one_hot(
@@ -380,6 +386,8 @@ class DoppelGANgerGenerator(torch.nn.Module):
                     addi_attribute_input)
 
                 for attr_layer in self.addi_attribute_gen_last_layer:
+                    # print("\nattr_layer:\n\t{}\naddi_attr_shape: {}".format(
+                    #     type(attr_layer), addi_attribute_gen_tmp.shape))
                     addi_attr_sub_output = attr_layer(addi_attribute_gen_tmp)
                     if isinstance(attr_layer[-1], torch.nn.Softmax):
                         addi_attr_sub_output_discrete = F.one_hot(
@@ -426,6 +434,9 @@ class DoppelGANgerGenerator(torch.nn.Module):
                     xt[:, None, :], (hn, cn))
                 feature_per_step = []
                 for feature_layer in self.feature_gen_last_layer:
+                    # print("\nfeature_layer:\n\t{}\noutput_per_step.shape: {}".format(
+                    #     type(feature_layer), output_per_step.shape)
+                    # )
                     feature_sub_output = feature_layer(output_per_step)
                     feature_per_step.append(feature_sub_output)
 
@@ -456,6 +467,8 @@ class DoppelGANgerGenerator(torch.nn.Module):
 
             feature = []
             for feature_layer in self.feature_gen_last_layer:
+                # print("\nfeature_layer:\n\t{}\nfeature_rnn_output_shape: {}".format(
+                #     type(feature_layer), feature_rnn_output_tmp.shape))
                 feature_sub_output = feature_layer(feature_rnn_output_tmp)
                 feature.append(feature_sub_output)
             feature = torch.cat(feature, dim=2)
