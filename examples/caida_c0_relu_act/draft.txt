@@ -1,0 +1,15 @@
+batch_size      sample_len      generator       time/epoch 
+100             5               1/100           2min
+100             5               3/100           2min
+100             5               5/100           2min
+32              5               5/512           7min
+64              5               5/512           4min
+80              5               5/512           4min
+100             5               5/512           OOM
+100             5               5/256           2min
+150             5               5/256           1.5min
+> 180             5               5/256           1.5min
+200             5               5/256           OOM
+
+
+

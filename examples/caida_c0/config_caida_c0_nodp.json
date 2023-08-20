@@ -103,7 +103,7 @@
     "model": {
         "class": "DoppelGANgerTorchModel",
         "config": {
-            "batch_size": 100,
+            "batch_size": 512,
             "sample_len": [
                 1, 5, 10, 25, 50, 100
             ],

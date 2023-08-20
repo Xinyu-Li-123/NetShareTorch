@@ -175,8 +175,24 @@ class DoppelGANgerGenerator(torch.nn.Module):
                     == Normalization.ZERO_ONE
                 ):
                     attr_out_layer.append(torch.nn.Sigmoid())
-                else:
+                elif (
+                    self.real_attribute_outputs[i].normalization
+                    == Normalization.MINUSONE_ONE
+                ):
                     attr_out_layer.append(torch.nn.Tanh())
+                elif (
+                    self.real_attribute_outputs[i].normalization
+                    == Normalization.RELU
+                ):
+                    # ReLU, then batch norm
+                    attr_out_layer.append(torch.nn.ReLU())
+                    attr_out_layer.append(
+                        torch.nn.BatchNorm1d(
+                            num_features=self.real_attribute_outputs[i].dim, eps=1e-5, momentum=0.9,
+                        ))
+                else:
+                    raise ValueError("Unknown normalization type: {}".format(
+                        self.real_attribute_outputs[i].normalization))
             self.real_attribute_gen_last_layer.append(
                 torch.nn.Sequential(*attr_out_layer)
             )
@@ -213,8 +229,24 @@ class DoppelGANgerGenerator(torch.nn.Module):
                         == Normalization.ZERO_ONE
                     ):
                         attr_out_layer.append(torch.nn.Sigmoid())
-                    else:
+                    elif (
+                        self.addi_attribute_outputs[i].normalization
+                        == Normalization.MINUSONE_ONE
+                    ):
                         attr_out_layer.append(torch.nn.Tanh())
+                    elif (
+                        self.addi_attribute_outputs[i].normalization
+                        == Normalization.RELU
+                    ):
+                        # ReLU, then batch norm
+                        attr_out_layer.append(torch.nn.ReLU())
+                        attr_out_layer.append(
+                            torch.nn.BatchNorm1d(
+                                num_features=self.addi_attribute_outputs[i].dim, eps=1e-5, momentum=0.9,
+                            ))
+                    else:
+                        raise ValueError("Unknown normalization type: {}".format(
+                            self.addi_attribute_outputs[i].normalization))
                 self.addi_attribute_gen_last_layer.append(
                     torch.nn.Sequential(*attr_out_layer)
                 )
@@ -247,9 +279,24 @@ class DoppelGANgerGenerator(torch.nn.Module):
                     == Normalization.ZERO_ONE
                 ):
                     feature_out_layer.append(torch.nn.Sigmoid())
-                else:
+                elif (
+                    self.feature_outputs[i % feature_len].normalization
+                    == Normalization.MINUSONE_ONE
+                ):
                     feature_out_layer.append(torch.nn.Tanh())
-
+                elif (
+                    self.feature_outputs[i % feature_len].normalization
+                    == Normalization.RELU
+                ):
+                    # ReLU, then batch norm
+                    feature_out_layer.append(torch.nn.ReLU())
+                    feature_out_layer.append(
+                        torch.nn.BatchNorm1d(
+                            num_features=self.feature_outputs[i % feature_len].dim, eps=1e-5, momentum=0.9,
+                        ))
+                else:
+                    raise ValueError("Unknown normalization type: {}".format(
+                        self.feature_outputs[i % feature_len].normalization))
             self.feature_gen_last_layer.append(
                 torch.nn.Sequential(*feature_out_layer))
 

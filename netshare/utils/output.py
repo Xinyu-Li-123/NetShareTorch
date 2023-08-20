@@ -9,6 +9,7 @@ class OutputType(Enum):
 class Normalization(Enum):
     ZERO_ONE = "ZERO_ONE"
     MINUSONE_ONE = "MINUSONE_ONE"
+    RELU = "RELU"
 
 
 class Output(object):

@@ -118,9 +118,9 @@ class DoppelGANger(object):
 
         self.MODEL_NAME = "model"
 
-        # self.device = torch.device(
-        #     "cuda" if torch.cuda.is_available() else "cpu")
-        self.device = "cpu"
+        self.device = torch.device(
+            "cuda" if torch.cuda.is_available() else "cpu")
+        # self.device = "cpu"
 
         if self.max_sequence_len % self.sample_len != 0:
             raise Exception("length must be a multiple of sample_len")

@@ -14,7 +14,7 @@
                 "column": "time",
                 "generation": true,
                 "encoding": "interarrival",
-                "normalization": "ZERO_ONE"
+                "normalization": "RELU"
             },
             "word2vec": {
                 "vec_size": 10,
@@ -105,14 +105,14 @@
         "config": {
         "batch_size": 100,
             "sample_len": [
-                1
+                5
             ],
             "sample_len_expand": true,
-            "epochs": 1000,
+            "epochs": 200,
             "generator_feature_num_layers": 1,
             "generator_feature_num_units": 100,
             "extra_checkpoint_freq": 10000,
-            "epoch_checkpoint_freq": 100
+            "epoch_checkpoint_freq": 10
         }
     }
 }

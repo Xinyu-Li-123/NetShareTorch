@@ -57,6 +57,9 @@ class ContinuousField(Field):
         elif self.norm_option == Normalization.MINUSONE_ONE:
             return np.asarray(2 * (x - self.min_x)
                               / (self.max_x - self.min_x) - 1)
+        # feed into ReLU and apply batch norm
+        elif self.norm_option == Normalization.RELU:
+            return np.asarray(x - self.min_x)
         else:
             raise Exception("Not valid normalization option!")
 
@@ -74,7 +77,8 @@ class ContinuousField(Field):
         elif self.norm_option == Normalization.MINUSONE_ONE:
             to_return = (norm_x + 1) / 2.0 * \
                 float(self.max_x - self.min_x) + self.min_x
-
+        elif self.norm_option == Normalization.RELU:
+            to_return = norm_x + self.min_x
         else:
             raise Exception("Not valid normalization option!")
 
