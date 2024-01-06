@@ -34,22 +34,16 @@ if __name__ == '__main__':
 
     # configuration file
     # generator = Generator(config="config_caida_small_nodp.json")
-    generator = Generator(config="config_dummy.json")
+    generator = Generator(config="config_caida_c0_nodp.json")
 
     # `work_folder` should not exist o/w an overwrite error will be thrown.
     # Please set the `worker_folder` as *absolute path*
     # if you are using Ray with multi-machine setup
     # since Ray has bugs when dealing with relative paths.
-    generator.train(work_folder='../../results/caida_c0_1-100', preprocess=False, train=True)
-    generator.generate(work_folder='../../results/caida_c0_1-100')
-    # generator.visualize(work_folder='../../results/caida_c0_1-100', port=8056)
+    generator.train(work_folder='../../results/caida_c0', preprocess=False, train=True)
+    generator.generate(work_folder='../../results/caida_c0')
     # find available port starting from 8050
-    port = 8056
-    while port < 8500:
-        try:
-            generator.visualize(work_folder='../../results/caida_c0_1-100', port=port)
-            break
-        except Exception:
-            port += 1 
+    generator.visualize(work_folder='../../results/caida_c0', port=8057)
+
 
     ray.shutdown()

@@ -193,17 +193,70 @@ int pcap2csv(char *pcapFile, char *csvFile)
         if (p.ip_p == 6)
         {
             strcpy(proto, "TCP");
+            printf("TCP packet\n");
         }
         else if (p.ip_p == 17)
         {
             strcpy(proto, "UDP");
+            printf("UDP packet\n");
         }
         else
         {
-            printf("Not TCP/UDP packet!\n");
+            // skip this packet and print the p.ip_p
+            printf("p.ip_p = %u, not pcap or udp, skipped\n", p.ip_p);
+            // printf("Not TCP/UDP packet, skipped!\n");
+            continue;
         }
 
+        // switch (ip_p) {
+        //     case 0: strcpy(proto, "HOPOPT"); break;
+        //     case 1: strcpy(proto, "ICMP"); break;
+        //     case 2: strcpy(proto, "IGMP"); break;
+        //     case 3: strcpy(proto, "GGP"); break;
+        //     case 4: strcpy(proto, "IPv4"); break;
+        //     case 5: strcpy(proto, "ST"); break;
+        //     case 6: strcpy(proto, "TCP"); break;
+        //     case 7: strcpy(proto, "CBT"); break;
+        //     case 8: strcpy(proto, "EGP"); break;
+        //     case 9: strcpy(proto, "IGP"); break;
+        //     case 10: strcpy(proto, "BBN-RCC-MON"); break;
+        //     case 11: strcpy(proto, "NVP-II"); break;
+        //     case 12: strcpy(proto, "PUP"); break;
+        //     case 13: strcpy(proto, "ARGUS (deprecated)"); break;
+        //     case 14: strcpy(proto, "EMCON"); break;
+        //     case 15: strcpy(proto, "XNET"); break;
+        //     case 16: strcpy(proto, "CHAOS"); break;
+        //     case 17: strcpy(proto, "UDP"); break;
+        //     case 18: strcpy(proto, "MUX"); break;
+        //     case 19: strcpy(proto, "DCN-MEAS"); break;
+        //     case 20: strcpy(proto, "HMP"); break;
+        //     case 21: strcpy(proto, "PRM"); break;
+        //     case 22: strcpy(proto, "XNS-IDP"); break;
+        //     case 23: strcpy(proto, "TRUNK-1"); break;
+        //     case 24: strcpy(proto, "TRUNK-2"); break;
+        //     case 25: strcpy(proto, "LEAF-1"); break;
+        //     case 26: strcpy(proto, "LEAF-2"); break;
+        //     case 27: strcpy(proto, "RDP"); break;
+        //     case 28: strcpy(proto, "IRTP"); break;
+        //     case 29: strcpy(proto, "ISO-TP4"); break;
+        //     case 30: strcpy(proto, "NETBLT"); break;
+        //     case 31: strcpy(proto, "MFE-NSP"); break;
+        //     // ... (and so on for the rest of the cases)
+        //     case 123: strcpy(proto, "PTP"); break;
+        //     case 124: strcpy(proto, "ISIS over IPv4"); break;
+        //     case 125: strcpy(proto, "FIRE"); break;
+        //     case 126: strcpy(proto, "CRTP"); break;
+        //     case 127: strcpy(proto, "CRUDP"); break;
+        //     case 128: strcpy(proto, "SSCOPMCE"); break;
+        //     case 129: strcpy(proto, "IPLT"); break;
+        //     case 130: strcpy(proto, "SPS"); break;
+        //     // ... (and so on for the rest of the cases)
+        //     case 255: strcpy(proto, "Reserved"); break;
+        //     default: strcpy(proto, "Unknown"); break;
+        // }
+
         fprintf(fp, "%u,%u,%hu,%hu,%s,%lu,%hu,%u,%u,%u,%hu,%hu,%hu,%u,%hu\n", p.srcip, p.dstip, p.srcport, p.dstport, proto, p.timestamp, p.ip_len, p.ip_v, p.ip_hl, p.ip_tos, p.ip_id, ip_flag, ip_off, p.ip_ttl, p.ip_sum);
+
     }
 
     fclose(fp);

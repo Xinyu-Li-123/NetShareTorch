@@ -1,12 +1,23 @@
 {
     "global_config": {
-        "original_data_file": "../../traces/caida_c0/raw.pcap",
+        "original_data_file": "../../../NTA/data/dc_c0/raw.csv",
         "overwrite": true,
         "dataset_type": "pcap",
         "n_chunks": 1,
         "dp": false
     },
     "default": "single_event_per_row.json",
+    "model_manager": {
+        "class": "NetShareManager",
+        "config": {
+            "pretrain_dir": null,
+            "skip_chunk0_train": false,
+            "pretrain_non_dp": true,
+            "pretrain_non_dp_reduce_time": 4.0,
+            "pretrain_dp": false,
+            "run": 0
+        }
+    },
     "pre_post_processor": {
         "class": "NetsharePrePostProcessor",
         "config": {
@@ -14,7 +25,7 @@
                 "column": "time",
                 "generation": true,
                 "encoding": "interarrival",
-                "normalization": "RELU"
+                "normalization": "ZERO_ONE"
             },
             "word2vec": {
                 "vec_size": 10,
@@ -103,16 +114,14 @@
     "model": {
         "class": "DoppelGANgerTorchModel",
         "config": {
-        "batch_size": 100,
+            "batch_size": 40,
             "sample_len": [
                 5
             ],
             "sample_len_expand": true,
-            "epochs": 200,
-            "generator_feature_num_layers": 1,
-            "generator_feature_num_units": 100,
+            "epochs": 1000,
             "extra_checkpoint_freq": 10000,
-            "epoch_checkpoint_freq": 10
+            "epoch_checkpoint_freq": 100
         }
     }
 }

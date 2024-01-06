@@ -1,6 +1,6 @@
 {
     "global_config": {
-        "original_data_file": "../../traces/caida_c0/raw.pcap",
+        "original_data_file": "../../../NTA/data/ton_iot_small/normal_1_small.csv",
         "overwrite": true,
         "dataset_type": "pcap",
         "n_chunks": 1,
@@ -103,16 +103,16 @@
     "model": {
         "class": "DoppelGANgerTorchModel",
         "config": {
-        "batch_size": 100,
+            "batch_size": 100,
             "sample_len": [
-                1
+                5
             ],
             "sample_len_expand": true,
             "epochs": 1000,
             "generator_feature_num_layers": 1,
             "generator_feature_num_units": 100,
             "extra_checkpoint_freq": 10000,
-            "epoch_checkpoint_freq": 100
+            "epoch_checkpoint_freq": 200
         }
     }
 }

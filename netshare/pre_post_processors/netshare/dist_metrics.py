@@ -45,17 +45,63 @@ CB_color_cycle = ['#377eb8', '#ff7f00', '#4daf4a',
 # }
 
 # https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml
+# dict_pr_str2int = {
+#     "ESP": 50,
+#     "GRE": 47,
+#     "ICMP": 1,
+#     "IPIP": 4,
+#     "IPv6": 41,
+#     "TCP": 6,
+#     "UDP": 17,
+#     "RSVP": 46,
+#     "Other": 255,
+#     "255": 255,  # TEMP
+# }
+
 dict_pr_str2int = {
-    "ESP": 50,
-    "GRE": 47,
-    "ICMP": 1,
-    "IPIP": 4,
-    "IPv6": 41,
-    "TCP": 6,
-    "UDP": 17,
-    "RSVP": 46,
-    "Other": 255,
-    "255": 255,  # TEMP
+    0: 'HOPOPT',
+    1: 'ICMP',
+    2: 'IGMP',
+    3: 'GGP',
+    4: 'IPv4',
+    5: 'ST',
+    6: 'TCP',
+    7: 'CBT',
+    8: 'EGP',
+    9: 'IGP',
+    10: 'BBN-RCC-MON',
+    11: 'NVP-II',
+    12: 'PUP',
+    13: 'ARGUS (deprecated)',
+    14: 'EMCON',
+    15: 'XNET',
+    16: 'CHAOS',
+    17: 'UDP',
+    18: 'MUX',
+    19: 'DCN-MEAS',
+    20: 'HMP',
+    21: 'PRM',
+    22: 'XNS-IDP',
+    23: 'TRUNK-1',
+    24: 'TRUNK-2',
+    25: 'LEAF-1',
+    26: 'LEAF-2',
+    27: 'RDP',
+    28: 'IRTP',
+    29: 'ISO-TP4',
+    30: 'NETBLT',
+    31: 'MFE-NSP',
+    # ... (and so on for the rest of the entries)
+    123: 'PTP',
+    124: 'ISIS over IPv4',
+    125: 'FIRE',
+    126: 'CRTP',
+    127: 'CRUDP',
+    128: 'SSCOPMCE',
+    129: 'IPLT',
+    130: 'SPS',
+    # ... (and so on for the rest of the entries)
+    255: 'Reserved'
 }
 
 

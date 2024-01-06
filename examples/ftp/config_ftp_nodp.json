@@ -1,9 +1,9 @@
 {
     "global_config": {
-        "original_data_file": "../../traces/caida_c0/raw.pcap",
+        "original_data_file": "/home/xinyu/NTA/data/tor/FTP_filetransfer.csv",
         "overwrite": true,
         "dataset_type": "pcap",
-        "n_chunks": 1,
+        "n_chunks": 10,
         "dp": false
     },
     "default": "single_event_per_row.json",
@@ -14,7 +14,7 @@
                 "column": "time",
                 "generation": true,
                 "encoding": "interarrival",
-                "normalization": "RELU"
+                "normalization": "ZERO_ONE"
             },
             "word2vec": {
                 "vec_size": 10,
@@ -103,16 +103,14 @@
     "model": {
         "class": "DoppelGANgerTorchModel",
         "config": {
-        "batch_size": 100,
+            "batch_size": 4,
             "sample_len": [
                 5
             ],
             "sample_len_expand": true,
-            "epochs": 200,
-            "generator_feature_num_layers": 1,
-            "generator_feature_num_units": 100,
+            "epochs": 1000,
             "extra_checkpoint_freq": 10000,
-            "epoch_checkpoint_freq": 10
+            "epoch_checkpoint_freq": 200
         }
     }
 }
