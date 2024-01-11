@@ -325,7 +325,10 @@ def split_per_chunk(
                     "Cross-chunk mechanism enabled, \
                     cross-chunk flow stats not provided!")
             ori_group_name = tuple(
-                df_group.iloc[0][[m.column for m in config["metadata"]]])
+                # The commented line somehow convert int to float, which causes an error during the sanity check below
+                #   This is likely a bug in pandas
+                # df_group.iloc[0][[m.column for m in config["metadata"]]])
+                df_group[[m.column for m in config["metadata"]]].iloc[0])
 
             # MULTI-CHUNK TAGS: TO BE OPTIMIZED FOR PERFORMANCE
             if str(ori_group_name) in flowkeys_chunkidx:  # sanity check

@@ -192,12 +192,14 @@ int pcap2csv(char *pcapFile, char *csvFile)
         char proto[128];
         if (p.ip_p == 6)
         {
-            strcpy(proto, "TCP");
+            // strcpy(proto, "TCP");
+            strcpy(proto, "6");
             printf("TCP packet\n");
         }
         else if (p.ip_p == 17)
         {
-            strcpy(proto, "UDP");
+            // strcpy(proto, "UDP");
+            strcpy(proto, "17");
             printf("UDP packet\n");
         }
         else

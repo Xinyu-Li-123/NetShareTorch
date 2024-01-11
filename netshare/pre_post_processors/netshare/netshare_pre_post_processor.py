@@ -68,6 +68,8 @@ class NetsharePrePostProcessor(PrePostProcessor):
                 )
                 print(f"{input_folder} has been converted to {csv_file}")
                 df = pd.read_csv(csv_file)
+                # print("We convert pcap to csv here, and use the csv on any other devices for computation")
+                # exit()
             else:
                 raise ValueError(
                     "PCAP file extension should be `.pcap`(native) or `.csv`(converted)!")
