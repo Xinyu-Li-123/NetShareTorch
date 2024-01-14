@@ -1,6 +1,6 @@
 {
     "global_config": {
-        "original_data_file": "../../../NTA/data/ton_iot/normal_1.csv",
+        "original_data_file": "../../traces/ton_iot/normal_1.csv",
         "overwrite": true,
         "dataset_type": "pcap",
         "n_chunks": 10,
@@ -108,7 +108,7 @@
                 5
             ],
             "sample_len_expand": true,
-            "epochs": 1000,
+            "epochs": 20000,
             "generator_feature_num_layers": 1,
             "generator_feature_num_units": 100,
             "extra_checkpoint_freq": 10000,

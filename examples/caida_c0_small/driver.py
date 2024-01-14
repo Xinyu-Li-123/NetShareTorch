@@ -24,7 +24,14 @@ gen: 1 layer, 512 unit
 sample_len - time per epoch
     5: 1h
 """
+import torch
 
+print("Is cuda available: {}".format(torch.cuda.is_available()))
+
+exit(0)
+
+# a = 3/0
+# print("Test: Intentional error of division by zero should be raised here")
 if __name__ == '__main__':
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
@@ -44,12 +51,12 @@ if __name__ == '__main__':
     generator.generate(work_folder='../../results/caida_c0_small_1-100')
     # generator.visualize(work_folder='../../results/caida_c0_1-100', port=8056)
     # find available port starting from 8050
-    port = 8056
-    while port < 8500:
-        try:
-            generator.visualize(work_folder='../../results/caida_c0_small_1-100', port=port)
-            break
-        except Exception:
-            port += 1 
+    # port = 8056
+    # while port < 8500:
+    #     try:
+    #         generator.visualize(work_folder='../../results/caida_c0_small_1-100', port=port)
+    #         break
+    #     except Exception:
+    #         port += 1 
 
     ray.shutdown()

@@ -1,0 +1,1320 @@
+[KeOps] Warning : Cuda libraries were not detected on the system ; using cpu only mode
+Ray is disabled
+NetsharePrePostProcessor._pre_process
+../../traces/ton_iot/normal_1.csv
+dataset type: pcap
+metadata cols: ['srcip', 'dstip', 'srcport', 'dstport', 'proto']
+word2vec cols: ['srcport', 'dstport', 'proto']
+Training Word2Vec model from scratch...
+Word2Vec model is saved at ../../results/ton_iot/pre_processed_data/word2vec_vecSize_10.model
+Building annoy dictionary word2vec...
+{'port': ['srcport', 'dstport'], 'proto': ['proto']}
+Finish building Angular trees...
+metadata fields: ['srcip', 'dstip', 'srcport', 'dstport', 'proto']
+timeseries fields: ['pkt_len', 'tos', 'id', 'flag', 'off', 'ttl']
+Using fixed_time
+10
+Chunk_id: 0, # of pkts/records: 64337
+Chunk_id: 1, # of pkts/records: 64566
+Chunk_id: 2, # of pkts/records: 64650
+Chunk_id: 3, # of pkts/records: 54692
+Chunk_id: 4, # of pkts/records: 45123
+Chunk_id: 5, # of pkts/records: 28263
+Chunk_id: 6, # of pkts/records: 52677
+Chunk_id: 7, # of pkts/records: 23652
+Chunk_id: 8, # of pkts/records: 23974
+Chunk_id: 9, # of pkts/records: 23385
+df_chunk_cnt_validation: 445319
+Chunk time: 980.1700782 seconds
+compute flowkey-chunk list from scratch...
+processing chunk 1/10, # of flows: 444
+processing chunk 2/10, # of flows: 381
+processing chunk 3/10, # of flows: 517
+processing chunk 4/10, # of flows: 557
+processing chunk 5/10, # of flows: 457
+processing chunk 6/10, # of flows: 367
+processing chunk 7/10, # of flows: 1030
+processing chunk 8/10, # of flows: 252
+processing chunk 9/10, # of flows: 352
+processing chunk 10/10, # of flows: 185
+# of total flows: 4294
+# of total flows (sanity check): 4294
+# of flows cross chunk (of total flows): 56 (1.304145319049837%)
+# of non-continuous flows: 11
+chunk_id: 0, max_flow_len: 8501
+chunk_id: 1, max_flow_len: 8611
+chunk_id: 2, max_flow_len: 8670
+chunk_id: 3, max_flow_len: 8234
+chunk_id: 4, max_flow_len: 8057
+chunk_id: 5, max_flow_len: 6762
+chunk_id: 6, max_flow_len: 6954
+chunk_id: 7, max_flow_len: 4374
+chunk_id: 8, max_flow_len: 4608
+chunk_id: 9, max_flow_len: 4614
+global max flow len: 8670
+Top 10 per-chunk flow length: [8111, 8192, 8224, 8234, 8417, 8489, 8501, 8545, 8611, 8670]
+
+Chunk_id: 0
+Before truncation, df_per_chunk: (64337, 14)
+After truncation, df_per_chunk: (64337, 14)
+df_per_chunk: (64337, 175)
+data_attribute: (444, 181), 0.000642912GB in memory
+data_feature: (444, 8670, 9), 0.27716256GB in memory
+data_gen_flag: (444, 8670), 0.03079584GB in memory
+
+Chunk_id: 1
+Before truncation, df_per_chunk: (64566, 14)
+After truncation, df_per_chunk: (64566, 14)
+df_per_chunk: (64566, 175)
+data_attribute: (381, 181), 0.000551688GB in memory
+data_feature: (381, 8670, 9), 0.23783544GB in memory
+data_gen_flag: (381, 8670), 0.02642616GB in memory
+
+Chunk_id: 2
+Before truncation, df_per_chunk: (64650, 14)
+After truncation, df_per_chunk: (64650, 14)
+df_per_chunk: (64650, 175)
+data_attribute: (517, 181), 0.000748616GB in memory
+data_feature: (517, 8670, 9), 0.32273208GB in memory
+data_gen_flag: (517, 8670), 0.03585912GB in memory
+
+Chunk_id: 3
+Before truncation, df_per_chunk: (54692, 14)
+After truncation, df_per_chunk: (54692, 14)
+df_per_chunk: (54692, 175)
+data_attribute: (557, 181), 0.000806536GB in memory
+data_feature: (557, 8670, 9), 0.34770168GB in memory
+data_gen_flag: (557, 8670), 0.03863352GB in memory
+
+Chunk_id: 4
+Before truncation, df_per_chunk: (45123, 14)
+After truncation, df_per_chunk: (45123, 14)
+df_per_chunk: (45123, 175)
+data_attribute: (457, 181), 0.000661736GB in memory
+data_feature: (457, 8670, 9), 0.28527768GB in memory
+data_gen_flag: (457, 8670), 0.03169752GB in memory
+
+Chunk_id: 5
+Before truncation, df_per_chunk: (28263, 14)
+After truncation, df_per_chunk: (28263, 14)
+df_per_chunk: (28263, 175)
+data_attribute: (367, 181), 0.000531416GB in memory
+data_feature: (367, 8670, 9), 0.22909608GB in memory
+data_gen_flag: (367, 8670), 0.02545512GB in memory
+
+Chunk_id: 6
+Before truncation, df_per_chunk: (52677, 14)
+After truncation, df_per_chunk: (52677, 14)
+df_per_chunk: (52677, 175)
+data_attribute: (1030, 181), 0.00149144GB in memory
+data_feature: (1030, 8670, 9), 0.6429672GB in memory
+data_gen_flag: (1030, 8670), 0.0714408GB in memory
+
+Chunk_id: 7
+Before truncation, df_per_chunk: (23652, 14)
+After truncation, df_per_chunk: (23652, 14)
+df_per_chunk: (23652, 175)
+data_attribute: (252, 181), 0.000364896GB in memory
+data_feature: (252, 8670, 9), 0.15730848GB in memory
+data_gen_flag: (252, 8670), 0.01747872GB in memory
+
+Chunk_id: 8
+Before truncation, df_per_chunk: (23974, 14)
+After truncation, df_per_chunk: (23974, 14)
+df_per_chunk: (23974, 175)
+data_attribute: (352, 181), 0.000509696GB in memory
+data_feature: (352, 8670, 9), 0.21973248GB in memory
+data_gen_flag: (352, 8670), 0.02441472GB in memory
+
+Chunk_id: 9
+Before truncation, df_per_chunk: (23385, 14)
+After truncation, df_per_chunk: (23385, 14)
+df_per_chunk: (23385, 175)
+data_attribute: (185, 181), 0.00026788GB in memory
+data_feature: (185, 8670, 9), 0.1154844GB in memory
+data_gen_flag: (185, 8670), 0.0128316GB in memory
+NetShareManager._train
+Chunk 0 is valid
+Chunk 1 is valid
+Chunk 2 is valid
+Chunk 3 is valid
+Chunk 4 is valid
+Chunk 5 is valid
+Chunk 6 is valid
+Chunk 7 is valid
+Chunk 8 is valid
+Chunk 9 is valid
+Number of valid chunks: 10
+Number of configurations after expanded: 10
+[{'dp_noise_multiplier': None, 'dp': False, 'pretrain': True, 'config_ids': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}]
+Config group 0: DP: False, pretrain: True
+Start launching chunk0 experiments...
+DoppelGANgerTorchModel._train
+Currently training with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 20000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-0', 'dataset_expand': True, 'sub_result_folder': 'chunkid-0/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-0/sample_len-5', 'restore': False}
+Finish launching chunk0 experiments ...
+Start waiting for other chunks from config_group_id 0 experiments finished ...
+DoppelGANgerTorchModel._train
+Currently training with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-1', 'dataset_expand': True, 'sub_result_folder': 'chunkid-1/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-1/sample_len-5', 'restore': True}
+Load pre-trained model from ../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt...
+DoppelGANgerTorchModel._train
+Currently training with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-2', 'dataset_expand': True, 'sub_result_folder': 'chunkid-2/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-2/sample_len-5', 'restore': True}
+Load pre-trained model from ../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt...
+DoppelGANgerTorchModel._train
+Currently training with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-3', 'dataset_expand': True, 'sub_result_folder': 'chunkid-3/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-3/sample_len-5', 'restore': True}
+Load pre-trained model from ../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt...
+DoppelGANgerTorchModel._train
+Currently training with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-4', 'dataset_expand': True, 'sub_result_folder': 'chunkid-4/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-4/sample_len-5', 'restore': True}
+Load pre-trained model from ../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt...
+DoppelGANgerTorchModel._train
+Currently training with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-5', 'dataset_expand': True, 'sub_result_folder': 'chunkid-5/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-5/sample_len-5', 'restore': True}
+Load pre-trained model from ../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt...
+DoppelGANgerTorchModel._train
+Currently training with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-6', 'dataset_expand': True, 'sub_result_folder': 'chunkid-6/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-6/sample_len-5', 'restore': True}
+Load pre-trained model from ../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt...
+DoppelGANgerTorchModel._train
+Currently training with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-7', 'dataset_expand': True, 'sub_result_folder': 'chunkid-7/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-7/sample_len-5', 'restore': True}
+Load pre-trained model from ../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt...
+DoppelGANgerTorchModel._train
+Currently training with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-8', 'dataset_expand': True, 'sub_result_folder': 'chunkid-8/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-8/sample_len-5', 'restore': True}
+Load pre-trained model from ../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt...
+DoppelGANgerTorchModel._train
+Currently training with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-9', 'dataset_expand': True, 'sub_result_folder': 'chunkid-9/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-9/sample_len-5', 'restore': True}
+Load pre-trained model from ../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt...
+Other chunks from config_group_id 0 training finished
+Chunk 0 is valid
+Chunk 1 is valid
+Chunk 2 is valid
+Chunk 3 is valid
+Chunk 4 is valid
+Chunk 5 is valid
+Chunk 6 is valid
+Chunk 7 is valid
+Chunk 8 is valid
+Chunk 9 is valid
+Number of valid chunks: 10
+Number of configurations after expanded: 10
+Start generating attributes ...
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 20000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-0', 'dataset_expand': True, 'sub_result_folder': 'chunkid-0/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-0/sample_len-5', 'restore': False, 'chunk_id': 0, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+Generating w/o given data attribute!
+Processing epoch_id: 19999
+generate 1-th sample from epoch_id-19999
+Finished loading
+../../results/ton_iot/generated_data/sample_len-5/attr_raw/chunk_id-0.npz
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-1', 'dataset_expand': True, 'sub_result_folder': 'chunkid-1/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-1/sample_len-5', 'restore': True, 'chunk_id': 1, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+Generating w/o given data attribute!
+Processing epoch_id: 4999
+generate 1-th sample from epoch_id-4999
+Finished loading
+../../results/ton_iot/generated_data/sample_len-5/attr_raw/chunk_id-1.npz
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-2', 'dataset_expand': True, 'sub_result_folder': 'chunkid-2/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-2/sample_len-5', 'restore': True, 'chunk_id': 2, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+Generating w/o given data attribute!
+Processing epoch_id: 4999
+generate 1-th sample from epoch_id-4999
+Finished loading
+../../results/ton_iot/generated_data/sample_len-5/attr_raw/chunk_id-2.npz
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-3', 'dataset_expand': True, 'sub_result_folder': 'chunkid-3/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-3/sample_len-5', 'restore': True, 'chunk_id': 3, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+Generating w/o given data attribute!
+Processing epoch_id: 4999
+generate 1-th sample from epoch_id-4999
+Finished loading
+../../results/ton_iot/generated_data/sample_len-5/attr_raw/chunk_id-3.npz
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-4', 'dataset_expand': True, 'sub_result_folder': 'chunkid-4/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-4/sample_len-5', 'restore': True, 'chunk_id': 4, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+Generating w/o given data attribute!
+Processing epoch_id: 4999
+generate 1-th sample from epoch_id-4999
+Finished loading
+../../results/ton_iot/generated_data/sample_len-5/attr_raw/chunk_id-4.npz
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-5', 'dataset_expand': True, 'sub_result_folder': 'chunkid-5/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-5/sample_len-5', 'restore': True, 'chunk_id': 5, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+Generating w/o given data attribute!
+Processing epoch_id: 4999
+generate 1-th sample from epoch_id-4999
+Finished loading
+../../results/ton_iot/generated_data/sample_len-5/attr_raw/chunk_id-5.npz
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-6', 'dataset_expand': True, 'sub_result_folder': 'chunkid-6/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-6/sample_len-5', 'restore': True, 'chunk_id': 6, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+Generating w/o given data attribute!
+Processing epoch_id: 4999
+generate 1-th sample from epoch_id-4999
+Finished loading
+../../results/ton_iot/generated_data/sample_len-5/attr_raw/chunk_id-6.npz
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-7', 'dataset_expand': True, 'sub_result_folder': 'chunkid-7/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-7/sample_len-5', 'restore': True, 'chunk_id': 7, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+Generating w/o given data attribute!
+Processing epoch_id: 4999
+generate 1-th sample from epoch_id-4999
+Finished loading
+../../results/ton_iot/generated_data/sample_len-5/attr_raw/chunk_id-7.npz
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-8', 'dataset_expand': True, 'sub_result_folder': 'chunkid-8/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-8/sample_len-5', 'restore': True, 'chunk_id': 8, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+Generating w/o given data attribute!
+Processing epoch_id: 4999
+generate 1-th sample from epoch_id-4999
+Finished loading
+../../results/ton_iot/generated_data/sample_len-5/attr_raw/chunk_id-8.npz
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-9', 'dataset_expand': True, 'sub_result_folder': 'chunkid-9/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-9/sample_len-5', 'restore': True, 'chunk_id': 9, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+Generating w/o given data attribute!
+Processing epoch_id: 4999
+generate 1-th sample from epoch_id-4999
+Finished loading
+../../results/ton_iot/generated_data/sample_len-5/attr_raw/chunk_id-9.npz
+Finish generating attributes
+Start merging attributes ...
+chunk0 config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 20000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-0', 'dataset_expand': True, 'sub_result_folder': 'chunkid-0/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-0/sample_len-5', 'restore': False, 'chunk_id': 0, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+bit_idx_flagstart: 158
+n_flows_startFromThisEpoch / total flows: 402/444
+n_flows_startFromThisEpoch / total flows: 336/381
+n_flows_startFromThisEpoch / total flows: 448/517
+n_flows_startFromThisEpoch / total flows: 380/557
+n_flows_startFromThisEpoch / total flows: 368/457
+n_flows_startFromThisEpoch / total flows: 289/367
+n_flows_startFromThisEpoch / total flows: 828/1030
+n_flows_startFromThisEpoch / total flows: 191/252
+n_flows_startFromThisEpoch / total flows: 280/352
+n_flows_startFromThisEpoch / total flows: 148/185
+Saving merged attrs...
+chunk 0: 402 flows
+chunk 1: 357 flows
+chunk 2: 466 flows
+chunk 3: 406 flows
+chunk 4: 398 flows
+chunk 5: 312 flows
+chunk 6: 868 flows
+chunk 7: 269 flows
+chunk 8: 344 flows
+chunk 9: 199 flows
+n_merged_attrs: 4021
+Finish merging attributes...
+Start generating features given attributes ...
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 20000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-0', 'dataset_expand': True, 'sub_result_folder': 'chunkid-0/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-0/sample_len-5', 'restore': False, 'chunk_id': 0, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': True}
+Generating from a given data attribute!
+Processing epoch_id: 19999
+generate 1-th sample from epoch_id-19999
+Finished loading
+Processing epoch_id: 19799
+generate 1-th sample from epoch_id-19799
+Finished loading
+Processing epoch_id: 19599
+generate 1-th sample from epoch_id-19599
+Finished loading
+Processing epoch_id: 19399
+generate 1-th sample from epoch_id-19399
+Finished loading
+Processing epoch_id: 19199
+generate 1-th sample from epoch_id-19199
+Finished loading
+Processing epoch_id: 18999
+generate 1-th sample from epoch_id-18999
+Finished loading
+Processing epoch_id: 18799
+generate 1-th sample from epoch_id-18799
+Finished loading
+Processing epoch_id: 18599
+generate 1-th sample from epoch_id-18599
+Finished loading
+Processing epoch_id: 18399
+generate 1-th sample from epoch_id-18399
+Finished loading
+Processing epoch_id: 18199
+generate 1-th sample from epoch_id-18199
+Finished loading
+Processing epoch_id: 17999
+generate 1-th sample from epoch_id-17999
+Finished loading
+Processing epoch_id: 17799
+generate 1-th sample from epoch_id-17799
+Finished loading
+Processing epoch_id: 17599
+generate 1-th sample from epoch_id-17599
+Finished loading
+Processing epoch_id: 17399
+generate 1-th sample from epoch_id-17399
+Finished loading
+Processing epoch_id: 17199
+generate 1-th sample from epoch_id-17199
+Finished loading
+Processing epoch_id: 16999
+generate 1-th sample from epoch_id-16999
+Finished loading
+Processing epoch_id: 16799
+generate 1-th sample from epoch_id-16799
+Finished loading
+Processing epoch_id: 16599
+generate 1-th sample from epoch_id-16599
+Finished loading
+Processing epoch_id: 16399
+generate 1-th sample from epoch_id-16399
+Finished loading
+Processing epoch_id: 16199
+generate 1-th sample from epoch_id-16199
+Finished loading
+Processing epoch_id: 15999
+generate 1-th sample from epoch_id-15999
+Finished loading
+Processing epoch_id: 15799
+generate 1-th sample from epoch_id-15799
+Finished loading
+Processing epoch_id: 15599
+generate 1-th sample from epoch_id-15599
+Finished loading
+Processing epoch_id: 15399
+generate 1-th sample from epoch_id-15399
+Finished loading
+Processing epoch_id: 15199
+generate 1-th sample from epoch_id-15199
+Finished loading
+Processing epoch_id: 14999
+generate 1-th sample from epoch_id-14999
+Finished loading
+Processing epoch_id: 14799
+generate 1-th sample from epoch_id-14799
+Finished loading
+Processing epoch_id: 14599
+generate 1-th sample from epoch_id-14599
+Finished loading
+Processing epoch_id: 14399
+generate 1-th sample from epoch_id-14399
+Finished loading
+Processing epoch_id: 14199
+generate 1-th sample from epoch_id-14199
+Finished loading
+Processing epoch_id: 13999
+generate 1-th sample from epoch_id-13999
+Finished loading
+Processing epoch_id: 13799
+generate 1-th sample from epoch_id-13799
+Finished loading
+Processing epoch_id: 13599
+generate 1-th sample from epoch_id-13599
+Finished loading
+Processing epoch_id: 13399
+generate 1-th sample from epoch_id-13399
+Finished loading
+Processing epoch_id: 13199
+generate 1-th sample from epoch_id-13199
+Finished loading
+Processing epoch_id: 12999
+generate 1-th sample from epoch_id-12999
+Finished loading
+Processing epoch_id: 12799
+generate 1-th sample from epoch_id-12799
+Finished loading
+Processing epoch_id: 12599
+generate 1-th sample from epoch_id-12599
+Finished loading
+Processing epoch_id: 12399
+generate 1-th sample from epoch_id-12399
+Finished loading
+Processing epoch_id: 12199
+generate 1-th sample from epoch_id-12199
+Finished loading
+Processing epoch_id: 11999
+generate 1-th sample from epoch_id-11999
+Finished loading
+Processing epoch_id: 11799
+generate 1-th sample from epoch_id-11799
+Finished loading
+Processing epoch_id: 11599
+generate 1-th sample from epoch_id-11599
+Finished loading
+Processing epoch_id: 11399
+generate 1-th sample from epoch_id-11399
+Finished loading
+Processing epoch_id: 11199
+generate 1-th sample from epoch_id-11199
+Finished loading
+Processing epoch_id: 10999
+generate 1-th sample from epoch_id-10999
+Finished loading
+Processing epoch_id: 10799
+generate 1-th sample from epoch_id-10799
+Finished loading
+Processing epoch_id: 10599
+generate 1-th sample from epoch_id-10599
+Finished loading
+Processing epoch_id: 10399
+generate 1-th sample from epoch_id-10399
+Finished loading
+Processing epoch_id: 10199
+generate 1-th sample from epoch_id-10199
+Finished loading
+Processing epoch_id: 9999
+generate 1-th sample from epoch_id-9999
+Finished loading
+Processing epoch_id: 9799
+generate 1-th sample from epoch_id-9799
+Finished loading
+Processing epoch_id: 9599
+generate 1-th sample from epoch_id-9599
+Finished loading
+Processing epoch_id: 9399
+generate 1-th sample from epoch_id-9399
+Finished loading
+Processing epoch_id: 9199
+generate 1-th sample from epoch_id-9199
+Finished loading
+Processing epoch_id: 8999
+generate 1-th sample from epoch_id-8999
+Finished loading
+Processing epoch_id: 8799
+generate 1-th sample from epoch_id-8799
+Finished loading
+Processing epoch_id: 8599
+generate 1-th sample from epoch_id-8599
+Finished loading
+Processing epoch_id: 8399
+generate 1-th sample from epoch_id-8399
+Finished loading
+Processing epoch_id: 8199
+generate 1-th sample from epoch_id-8199
+Finished loading
+Processing epoch_id: 7999
+generate 1-th sample from epoch_id-7999
+Finished loading
+Processing epoch_id: 7799
+generate 1-th sample from epoch_id-7799
+Finished loading
+Processing epoch_id: 7599
+generate 1-th sample from epoch_id-7599
+Finished loading
+Processing epoch_id: 7399
+generate 1-th sample from epoch_id-7399
+Finished loading
+Processing epoch_id: 7199
+generate 1-th sample from epoch_id-7199
+Finished loading
+Processing epoch_id: 6999
+generate 1-th sample from epoch_id-6999
+Finished loading
+Processing epoch_id: 6799
+generate 1-th sample from epoch_id-6799
+Finished loading
+Processing epoch_id: 6599
+generate 1-th sample from epoch_id-6599
+Finished loading
+Processing epoch_id: 6399
+generate 1-th sample from epoch_id-6399
+Finished loading
+Processing epoch_id: 6199
+generate 1-th sample from epoch_id-6199
+Finished loading
+Processing epoch_id: 5999
+generate 1-th sample from epoch_id-5999
+Finished loading
+Processing epoch_id: 5799
+generate 1-th sample from epoch_id-5799
+Finished loading
+Processing epoch_id: 5599
+generate 1-th sample from epoch_id-5599
+Finished loading
+Processing epoch_id: 5399
+generate 1-th sample from epoch_id-5399
+Finished loading
+Processing epoch_id: 5199
+generate 1-th sample from epoch_id-5199
+Finished loading
+Processing epoch_id: 4999
+generate 1-th sample from epoch_id-4999
+Finished loading
+Processing epoch_id: 4799
+generate 1-th sample from epoch_id-4799
+Finished loading
+Processing epoch_id: 4599
+generate 1-th sample from epoch_id-4599
+Finished loading
+Processing epoch_id: 4399
+generate 1-th sample from epoch_id-4399
+Finished loading
+Processing epoch_id: 4199
+generate 1-th sample from epoch_id-4199
+Finished loading
+Processing epoch_id: 3999
+generate 1-th sample from epoch_id-3999
+Finished loading
+Processing epoch_id: 3799
+generate 1-th sample from epoch_id-3799
+Finished loading
+Processing epoch_id: 3599
+generate 1-th sample from epoch_id-3599
+Finished loading
+Processing epoch_id: 3399
+generate 1-th sample from epoch_id-3399
+Finished loading
+Processing epoch_id: 3199
+generate 1-th sample from epoch_id-3199
+Finished loading
+Processing epoch_id: 2999
+generate 1-th sample from epoch_id-2999
+Finished loading
+Processing epoch_id: 2799
+generate 1-th sample from epoch_id-2799
+Finished loading
+Processing epoch_id: 2599
+generate 1-th sample from epoch_id-2599
+Finished loading
+Processing epoch_id: 2399
+generate 1-th sample from epoch_id-2399
+Finished loading
+Processing epoch_id: 2199
+generate 1-th sample from epoch_id-2199
+Finished loading
+Processing epoch_id: 1999
+generate 1-th sample from epoch_id-1999
+Finished loading
+Processing epoch_id: 1799
+generate 1-th sample from epoch_id-1799
+Finished loading
+Processing epoch_id: 1599
+generate 1-th sample from epoch_id-1599
+Finished loading
+Processing epoch_id: 1399
+generate 1-th sample from epoch_id-1399
+Finished loading
+Processing epoch_id: 1199
+generate 1-th sample from epoch_id-1199
+Finished loading
+Processing epoch_id: 999
+generate 1-th sample from epoch_id-999
+Finished loading
+Processing epoch_id: 799
+generate 1-th sample from epoch_id-799
+Finished loading
+Processing epoch_id: 599
+generate 1-th sample from epoch_id-599
+Finished loading
+Processing epoch_id: 399
+generate 1-th sample from epoch_id-399
+Finished loading
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-1', 'dataset_expand': True, 'sub_result_folder': 'chunkid-1/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-1/sample_len-5', 'restore': True, 'chunk_id': 1, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': True}
+Generating from a given data attribute!
+Processing epoch_id: 4999
+generate 1-th sample from epoch_id-4999
+Finished loading
+Processing epoch_id: 4799
+generate 1-th sample from epoch_id-4799
+Finished loading
+Processing epoch_id: 4599
+generate 1-th sample from epoch_id-4599
+Finished loading
+Processing epoch_id: 4399
+generate 1-th sample from epoch_id-4399
+Finished loading
+Processing epoch_id: 4199
+generate 1-th sample from epoch_id-4199
+Finished loading
+Processing epoch_id: 3999
+generate 1-th sample from epoch_id-3999
+Finished loading
+Processing epoch_id: 3799
+generate 1-th sample from epoch_id-3799
+Finished loading
+Processing epoch_id: 3599
+generate 1-th sample from epoch_id-3599
+Finished loading
+Processing epoch_id: 3399
+generate 1-th sample from epoch_id-3399
+Finished loading
+Processing epoch_id: 3199
+generate 1-th sample from epoch_id-3199
+Finished loading
+Processing epoch_id: 2999
+generate 1-th sample from epoch_id-2999
+Finished loading
+Processing epoch_id: 2799
+generate 1-th sample from epoch_id-2799
+Finished loading
+Processing epoch_id: 2599
+generate 1-th sample from epoch_id-2599
+Finished loading
+Processing epoch_id: 2399
+generate 1-th sample from epoch_id-2399
+Finished loading
+Processing epoch_id: 2199
+generate 1-th sample from epoch_id-2199
+Finished loading
+Processing epoch_id: 1999
+generate 1-th sample from epoch_id-1999
+Finished loading
+Processing epoch_id: 1799
+generate 1-th sample from epoch_id-1799
+Finished loading
+Processing epoch_id: 1599
+generate 1-th sample from epoch_id-1599
+Finished loading
+Processing epoch_id: 1399
+generate 1-th sample from epoch_id-1399
+Finished loading
+Processing epoch_id: 1199
+generate 1-th sample from epoch_id-1199
+Finished loading
+Processing epoch_id: 999
+generate 1-th sample from epoch_id-999
+Finished loading
+Processing epoch_id: 799
+generate 1-th sample from epoch_id-799
+Finished loading
+Processing epoch_id: 599
+generate 1-th sample from epoch_id-599
+Finished loading
+Processing epoch_id: 399
+generate 1-th sample from epoch_id-399
+Finished loading
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-2', 'dataset_expand': True, 'sub_result_folder': 'chunkid-2/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-2/sample_len-5', 'restore': True, 'chunk_id': 2, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': True}
+Generating from a given data attribute!
+Processing epoch_id: 4999
+generate 1-th sample from epoch_id-4999
+Finished loading
+Processing epoch_id: 4799
+generate 1-th sample from epoch_id-4799
+Finished loading
+Processing epoch_id: 4599
+generate 1-th sample from epoch_id-4599
+Finished loading
+Processing epoch_id: 4399
+generate 1-th sample from epoch_id-4399
+Finished loading
+Processing epoch_id: 4199
+generate 1-th sample from epoch_id-4199
+Finished loading
+Processing epoch_id: 3999
+generate 1-th sample from epoch_id-3999
+Finished loading
+Processing epoch_id: 3799
+generate 1-th sample from epoch_id-3799
+Finished loading
+Processing epoch_id: 3599
+generate 1-th sample from epoch_id-3599
+Finished loading
+Processing epoch_id: 3399
+generate 1-th sample from epoch_id-3399
+Finished loading
+Processing epoch_id: 3199
+generate 1-th sample from epoch_id-3199
+Finished loading
+Processing epoch_id: 2999
+generate 1-th sample from epoch_id-2999
+Finished loading
+Processing epoch_id: 2799
+generate 1-th sample from epoch_id-2799
+Finished loading
+Processing epoch_id: 2599
+generate 1-th sample from epoch_id-2599
+Finished loading
+Processing epoch_id: 2399
+generate 1-th sample from epoch_id-2399
+Finished loading
+Processing epoch_id: 2199
+generate 1-th sample from epoch_id-2199
+Finished loading
+Processing epoch_id: 1999
+generate 1-th sample from epoch_id-1999
+Finished loading
+Processing epoch_id: 1799
+generate 1-th sample from epoch_id-1799
+Finished loading
+Processing epoch_id: 1599
+generate 1-th sample from epoch_id-1599
+Finished loading
+Processing epoch_id: 1399
+generate 1-th sample from epoch_id-1399
+Finished loading
+Processing epoch_id: 1199
+generate 1-th sample from epoch_id-1199
+Finished loading
+Processing epoch_id: 999
+generate 1-th sample from epoch_id-999
+Finished loading
+Processing epoch_id: 799
+generate 1-th sample from epoch_id-799
+Finished loading
+Processing epoch_id: 599
+generate 1-th sample from epoch_id-599
+Finished loading
+Processing epoch_id: 399
+generate 1-th sample from epoch_id-399
+Finished loading
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-3', 'dataset_expand': True, 'sub_result_folder': 'chunkid-3/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-3/sample_len-5', 'restore': True, 'chunk_id': 3, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': True}
+Generating from a given data attribute!
+Processing epoch_id: 4999
+generate 1-th sample from epoch_id-4999
+Finished loading
+Processing epoch_id: 4799
+generate 1-th sample from epoch_id-4799
+Finished loading
+Processing epoch_id: 4599
+generate 1-th sample from epoch_id-4599
+Finished loading
+Processing epoch_id: 4399
+generate 1-th sample from epoch_id-4399
+Finished loading
+Processing epoch_id: 4199
+generate 1-th sample from epoch_id-4199
+Finished loading
+Processing epoch_id: 3999
+generate 1-th sample from epoch_id-3999
+Finished loading
+Processing epoch_id: 3799
+generate 1-th sample from epoch_id-3799
+Finished loading
+Processing epoch_id: 3599
+generate 1-th sample from epoch_id-3599
+Finished loading
+Processing epoch_id: 3399
+generate 1-th sample from epoch_id-3399
+Finished loading
+Processing epoch_id: 3199
+generate 1-th sample from epoch_id-3199
+Finished loading
+Processing epoch_id: 2999
+generate 1-th sample from epoch_id-2999
+Finished loading
+Processing epoch_id: 2799
+generate 1-th sample from epoch_id-2799
+Finished loading
+Processing epoch_id: 2599
+generate 1-th sample from epoch_id-2599
+Finished loading
+Processing epoch_id: 2399
+generate 1-th sample from epoch_id-2399
+Finished loading
+Processing epoch_id: 2199
+generate 1-th sample from epoch_id-2199
+Finished loading
+Processing epoch_id: 1999
+generate 1-th sample from epoch_id-1999
+Finished loading
+Processing epoch_id: 1799
+generate 1-th sample from epoch_id-1799
+Finished loading
+Processing epoch_id: 1599
+generate 1-th sample from epoch_id-1599
+Finished loading
+Processing epoch_id: 1399
+generate 1-th sample from epoch_id-1399
+Finished loading
+Processing epoch_id: 1199
+generate 1-th sample from epoch_id-1199
+Finished loading
+Processing epoch_id: 999
+generate 1-th sample from epoch_id-999
+Finished loading
+Processing epoch_id: 799
+generate 1-th sample from epoch_id-799
+Finished loading
+Processing epoch_id: 599
+generate 1-th sample from epoch_id-599
+Finished loading
+Processing epoch_id: 399
+generate 1-th sample from epoch_id-399
+Finished loading
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-4', 'dataset_expand': True, 'sub_result_folder': 'chunkid-4/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-4/sample_len-5', 'restore': True, 'chunk_id': 4, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': True}
+Generating from a given data attribute!
+Processing epoch_id: 4999
+generate 1-th sample from epoch_id-4999
+Finished loading
+Processing epoch_id: 4799
+generate 1-th sample from epoch_id-4799
+Finished loading
+Processing epoch_id: 4599
+generate 1-th sample from epoch_id-4599
+Finished loading
+Processing epoch_id: 4399
+generate 1-th sample from epoch_id-4399
+Finished loading
+Processing epoch_id: 4199
+generate 1-th sample from epoch_id-4199
+Finished loading
+Processing epoch_id: 3999
+generate 1-th sample from epoch_id-3999
+Finished loading
+Processing epoch_id: 3799
+generate 1-th sample from epoch_id-3799
+Finished loading
+Processing epoch_id: 3599
+generate 1-th sample from epoch_id-3599
+Finished loading
+Processing epoch_id: 3399
+generate 1-th sample from epoch_id-3399
+Finished loading
+Processing epoch_id: 3199
+generate 1-th sample from epoch_id-3199
+Finished loading
+Processing epoch_id: 2999
+generate 1-th sample from epoch_id-2999
+Finished loading
+Processing epoch_id: 2799
+generate 1-th sample from epoch_id-2799
+Finished loading
+Processing epoch_id: 2599
+generate 1-th sample from epoch_id-2599
+Finished loading
+Processing epoch_id: 2399
+generate 1-th sample from epoch_id-2399
+Finished loading
+Processing epoch_id: 2199
+generate 1-th sample from epoch_id-2199
+Finished loading
+Processing epoch_id: 1999
+generate 1-th sample from epoch_id-1999
+Finished loading
+Processing epoch_id: 1799
+generate 1-th sample from epoch_id-1799
+Finished loading
+Processing epoch_id: 1599
+generate 1-th sample from epoch_id-1599
+Finished loading
+Processing epoch_id: 1399
+generate 1-th sample from epoch_id-1399
+Finished loading
+Processing epoch_id: 1199
+generate 1-th sample from epoch_id-1199
+Finished loading
+Processing epoch_id: 999
+generate 1-th sample from epoch_id-999
+Finished loading
+Processing epoch_id: 799
+generate 1-th sample from epoch_id-799
+Finished loading
+Processing epoch_id: 599
+generate 1-th sample from epoch_id-599
+Finished loading
+Processing epoch_id: 399
+generate 1-th sample from epoch_id-399
+Finished loading
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-5', 'dataset_expand': True, 'sub_result_folder': 'chunkid-5/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-5/sample_len-5', 'restore': True, 'chunk_id': 5, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': True}
+Generating from a given data attribute!
+Processing epoch_id: 4999
+generate 1-th sample from epoch_id-4999
+Finished loading
+Processing epoch_id: 4799
+generate 1-th sample from epoch_id-4799
+Finished loading
+Processing epoch_id: 4599
+generate 1-th sample from epoch_id-4599
+Finished loading
+Processing epoch_id: 4399
+generate 1-th sample from epoch_id-4399
+Finished loading
+Processing epoch_id: 4199
+generate 1-th sample from epoch_id-4199
+Finished loading
+Processing epoch_id: 3999
+generate 1-th sample from epoch_id-3999
+Finished loading
+Processing epoch_id: 3799
+generate 1-th sample from epoch_id-3799
+Finished loading
+Processing epoch_id: 3599
+generate 1-th sample from epoch_id-3599
+Finished loading
+Processing epoch_id: 3399
+generate 1-th sample from epoch_id-3399
+Finished loading
+Processing epoch_id: 3199
+generate 1-th sample from epoch_id-3199
+Finished loading
+Processing epoch_id: 2999
+generate 1-th sample from epoch_id-2999
+Finished loading
+Processing epoch_id: 2799
+generate 1-th sample from epoch_id-2799
+Finished loading
+Processing epoch_id: 2599
+generate 1-th sample from epoch_id-2599
+Finished loading
+Processing epoch_id: 2399
+generate 1-th sample from epoch_id-2399
+Finished loading
+Processing epoch_id: 2199
+generate 1-th sample from epoch_id-2199
+Finished loading
+Processing epoch_id: 1999
+generate 1-th sample from epoch_id-1999
+Finished loading
+Processing epoch_id: 1799
+generate 1-th sample from epoch_id-1799
+Finished loading
+Processing epoch_id: 1599
+generate 1-th sample from epoch_id-1599
+Finished loading
+Processing epoch_id: 1399
+generate 1-th sample from epoch_id-1399
+Finished loading
+Processing epoch_id: 1199
+generate 1-th sample from epoch_id-1199
+Finished loading
+Processing epoch_id: 999
+generate 1-th sample from epoch_id-999
+Finished loading
+Processing epoch_id: 799
+generate 1-th sample from epoch_id-799
+Finished loading
+Processing epoch_id: 599
+generate 1-th sample from epoch_id-599
+Finished loading
+Processing epoch_id: 399
+generate 1-th sample from epoch_id-399
+Finished loading
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-6', 'dataset_expand': True, 'sub_result_folder': 'chunkid-6/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-6/sample_len-5', 'restore': True, 'chunk_id': 6, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': True}
+Generating from a given data attribute!
+Processing epoch_id: 4999
+generate 1-th sample from epoch_id-4999
+Finished loading
+Processing epoch_id: 4799
+generate 1-th sample from epoch_id-4799
+Finished loading
+Processing epoch_id: 4599
+generate 1-th sample from epoch_id-4599
+Finished loading
+Processing epoch_id: 4399
+generate 1-th sample from epoch_id-4399
+Finished loading
+Processing epoch_id: 4199
+generate 1-th sample from epoch_id-4199
+Finished loading
+Processing epoch_id: 3999
+generate 1-th sample from epoch_id-3999
+Finished loading
+Processing epoch_id: 3799
+generate 1-th sample from epoch_id-3799
+Finished loading
+Processing epoch_id: 3599
+generate 1-th sample from epoch_id-3599
+Finished loading
+Processing epoch_id: 3399
+generate 1-th sample from epoch_id-3399
+Finished loading
+Processing epoch_id: 3199
+generate 1-th sample from epoch_id-3199
+Finished loading
+Processing epoch_id: 2999
+generate 1-th sample from epoch_id-2999
+Finished loading
+Processing epoch_id: 2799
+generate 1-th sample from epoch_id-2799
+Finished loading
+Processing epoch_id: 2599
+generate 1-th sample from epoch_id-2599
+Finished loading
+Processing epoch_id: 2399
+generate 1-th sample from epoch_id-2399
+Finished loading
+Processing epoch_id: 2199
+generate 1-th sample from epoch_id-2199
+Finished loading
+Processing epoch_id: 1999
+generate 1-th sample from epoch_id-1999
+Finished loading
+Processing epoch_id: 1799
+generate 1-th sample from epoch_id-1799
+Finished loading
+Processing epoch_id: 1599
+generate 1-th sample from epoch_id-1599
+Finished loading
+Processing epoch_id: 1399
+generate 1-th sample from epoch_id-1399
+Finished loading
+Processing epoch_id: 1199
+generate 1-th sample from epoch_id-1199
+Finished loading
+Processing epoch_id: 999
+generate 1-th sample from epoch_id-999
+Finished loading
+Processing epoch_id: 799
+generate 1-th sample from epoch_id-799
+Finished loading
+Processing epoch_id: 599
+generate 1-th sample from epoch_id-599
+Finished loading
+Processing epoch_id: 399
+generate 1-th sample from epoch_id-399
+Finished loading
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-7', 'dataset_expand': True, 'sub_result_folder': 'chunkid-7/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-7/sample_len-5', 'restore': True, 'chunk_id': 7, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': True}
+Generating from a given data attribute!
+Processing epoch_id: 4999
+generate 1-th sample from epoch_id-4999
+Finished loading
+Processing epoch_id: 4799
+generate 1-th sample from epoch_id-4799
+Finished loading
+Processing epoch_id: 4599
+generate 1-th sample from epoch_id-4599
+Finished loading
+Processing epoch_id: 4399
+generate 1-th sample from epoch_id-4399
+Finished loading
+Processing epoch_id: 4199
+generate 1-th sample from epoch_id-4199
+Finished loading
+Processing epoch_id: 3999
+generate 1-th sample from epoch_id-3999
+Finished loading
+Processing epoch_id: 3799
+generate 1-th sample from epoch_id-3799
+Finished loading
+Processing epoch_id: 3599
+generate 1-th sample from epoch_id-3599
+Finished loading
+Processing epoch_id: 3399
+generate 1-th sample from epoch_id-3399
+Finished loading
+Processing epoch_id: 3199
+generate 1-th sample from epoch_id-3199
+Finished loading
+Processing epoch_id: 2999
+generate 1-th sample from epoch_id-2999
+Finished loading
+Processing epoch_id: 2799
+generate 1-th sample from epoch_id-2799
+Finished loading
+Processing epoch_id: 2599
+generate 1-th sample from epoch_id-2599
+Finished loading
+Processing epoch_id: 2399
+generate 1-th sample from epoch_id-2399
+Finished loading
+Processing epoch_id: 2199
+generate 1-th sample from epoch_id-2199
+Finished loading
+Processing epoch_id: 1999
+generate 1-th sample from epoch_id-1999
+Finished loading
+Processing epoch_id: 1799
+generate 1-th sample from epoch_id-1799
+Finished loading
+Processing epoch_id: 1599
+generate 1-th sample from epoch_id-1599
+Finished loading
+Processing epoch_id: 1399
+generate 1-th sample from epoch_id-1399
+Finished loading
+Processing epoch_id: 1199
+generate 1-th sample from epoch_id-1199
+Finished loading
+Processing epoch_id: 999
+generate 1-th sample from epoch_id-999
+Finished loading
+Processing epoch_id: 799
+generate 1-th sample from epoch_id-799
+Finished loading
+Processing epoch_id: 599
+generate 1-th sample from epoch_id-599
+Finished loading
+Processing epoch_id: 399
+generate 1-th sample from epoch_id-399
+Finished loading
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-8', 'dataset_expand': True, 'sub_result_folder': 'chunkid-8/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-8/sample_len-5', 'restore': True, 'chunk_id': 8, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': True}
+Generating from a given data attribute!
+Processing epoch_id: 4999
+generate 1-th sample from epoch_id-4999
+Finished loading
+Processing epoch_id: 4799
+generate 1-th sample from epoch_id-4799
+Finished loading
+Processing epoch_id: 4599
+generate 1-th sample from epoch_id-4599
+Finished loading
+Processing epoch_id: 4399
+generate 1-th sample from epoch_id-4399
+Finished loading
+Processing epoch_id: 4199
+generate 1-th sample from epoch_id-4199
+Finished loading
+Processing epoch_id: 3999
+generate 1-th sample from epoch_id-3999
+Finished loading
+Processing epoch_id: 3799
+generate 1-th sample from epoch_id-3799
+Finished loading
+Processing epoch_id: 3599
+generate 1-th sample from epoch_id-3599
+Finished loading
+Processing epoch_id: 3399
+generate 1-th sample from epoch_id-3399
+Finished loading
+Processing epoch_id: 3199
+generate 1-th sample from epoch_id-3199
+Finished loading
+Processing epoch_id: 2999
+generate 1-th sample from epoch_id-2999
+Finished loading
+Processing epoch_id: 2799
+generate 1-th sample from epoch_id-2799
+Finished loading
+Processing epoch_id: 2599
+generate 1-th sample from epoch_id-2599
+Finished loading
+Processing epoch_id: 2399
+generate 1-th sample from epoch_id-2399
+Finished loading
+Processing epoch_id: 2199
+generate 1-th sample from epoch_id-2199
+Finished loading
+Processing epoch_id: 1999
+generate 1-th sample from epoch_id-1999
+Finished loading
+Processing epoch_id: 1799
+generate 1-th sample from epoch_id-1799
+Finished loading
+Processing epoch_id: 1599
+generate 1-th sample from epoch_id-1599
+Finished loading
+Processing epoch_id: 1399
+generate 1-th sample from epoch_id-1399
+Finished loading
+Processing epoch_id: 1199
+generate 1-th sample from epoch_id-1199
+Finished loading
+Processing epoch_id: 999
+generate 1-th sample from epoch_id-999
+Finished loading
+Processing epoch_id: 799
+generate 1-th sample from epoch_id-799
+Finished loading
+Processing epoch_id: 599
+generate 1-th sample from epoch_id-599
+Finished loading
+Processing epoch_id: 399
+generate 1-th sample from epoch_id-399
+Finished loading
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/ton_iot/normal_1.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/ton_iot/models/chunkid-0/sample_len-5/checkpoint/epoch_id-19999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 100, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 200, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 5000, 'dataset': '../../results/ton_iot/pre_processed_data/chunkid-9', 'dataset_expand': True, 'sub_result_folder': 'chunkid-9/sample_len-5', 'result_folder': '../../results/ton_iot/models/chunkid-9/sample_len-5', 'restore': True, 'chunk_id': 9, 'eval_root_folder': '../../results/ton_iot/generated_data/sample_len-5', 'given_data_attribute_flag': True}
+Generating from a given data attribute!
+Processing epoch_id: 4999
+generate 1-th sample from epoch_id-4999
+Finished loading
+Processing epoch_id: 4799
+generate 1-th sample from epoch_id-4799
+Finished loading
+Processing epoch_id: 4599
+generate 1-th sample from epoch_id-4599
+Finished loading
+Processing epoch_id: 4399
+generate 1-th sample from epoch_id-4399
+Finished loading
+Processing epoch_id: 4199
+generate 1-th sample from epoch_id-4199
+Finished loading
+Processing epoch_id: 3999
+generate 1-th sample from epoch_id-3999
+Finished loading
+Processing epoch_id: 3799
+generate 1-th sample from epoch_id-3799
+Finished loading
+Processing epoch_id: 3599
+generate 1-th sample from epoch_id-3599
+Finished loading
+Processing epoch_id: 3399
+generate 1-th sample from epoch_id-3399
+Finished loading
+Processing epoch_id: 3199
+generate 1-th sample from epoch_id-3199
+Finished loading
+Processing epoch_id: 2999
+generate 1-th sample from epoch_id-2999
+Finished loading
+Processing epoch_id: 2799
+generate 1-th sample from epoch_id-2799
+Finished loading
+Processing epoch_id: 2599
+generate 1-th sample from epoch_id-2599
+Finished loading
+Processing epoch_id: 2399
+generate 1-th sample from epoch_id-2399
+Finished loading
+Processing epoch_id: 2199
+generate 1-th sample from epoch_id-2199
+Finished loading
+Processing epoch_id: 1999
+generate 1-th sample from epoch_id-1999
+Finished loading
+Processing epoch_id: 1799
+generate 1-th sample from epoch_id-1799
+Finished loading
+Processing epoch_id: 1599
+generate 1-th sample from epoch_id-1599
+Finished loading
+Processing epoch_id: 1399
+generate 1-th sample from epoch_id-1399
+Finished loading
+Processing epoch_id: 1199
+generate 1-th sample from epoch_id-1199
+Finished loading
+Processing epoch_id: 999
+generate 1-th sample from epoch_id-999
+Finished loading
+Processing epoch_id: 799
+generate 1-th sample from epoch_id-799
+Finished loading
+Processing epoch_id: 599
+generate 1-th sample from epoch_id-599
+Finished loading
+Processing epoch_id: 399
+generate 1-th sample from epoch_id-399
+Finished loading
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+Finish generating features given attributes ...
+NetsharePrePostProcessor._post_process
+Config group #0: {'dp_noise_multiplier': None, 'dp': False, 'pretrain': True, 'config_ids': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}
+Chunk_id: 0, # of syn dfs: 100, best_syndf: epoch_id-14399.csv
+Chunk_id: 1, # of syn dfs: 25, best_syndf: epoch_id-3799.csv
+Chunk_id: 2, # of syn dfs: 25, best_syndf: epoch_id-4399.csv
+Chunk_id: 3, # of syn dfs: 25, best_syndf: epoch_id-4999.csv
+Chunk_id: 4, # of syn dfs: 25, best_syndf: epoch_id-4999.csv
+Chunk_id: 5, # of syn dfs: 25, best_syndf: epoch_id-4599.csv
+Chunk_id: 6, # of syn dfs: 25, best_syndf: epoch_id-1199.csv
+Chunk_id: 7, # of syn dfs: 25, best_syndf: epoch_id-2799.csv
+Chunk_id: 8, # of syn dfs: 25, best_syndf: epoch_id-3599.csv
+Chunk_id: 9, # of syn dfs: 25, best_syndf: epoch_id-3599.csv
+Average truncation ratio: 0.5492820479571093
+Big syndf shape: (300245, 12)
+
+Aggregated final dataset syndf
+None (300245, 12)
+best_syn_df filename: ../../results/ton_iot/post_processed_data/syn_df,dp_noise_multiplier-None,truncate-per_chunk,id-1.csv
+Generated data is at ../../results/ton_iot/post_processed_data
+Ray is disabled

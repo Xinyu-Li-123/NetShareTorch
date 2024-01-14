@@ -1,9 +1,9 @@
 {
     "global_config": {
-        "original_data_file": "../../traces/caida_c0_small/raw.pcap",
+        "original_data_file": "../../traces/caida_c0_small/raw.csv",
         "overwrite": true,
         "dataset_type": "pcap",
-        "n_chunks": 1,
+        "n_chunks": 2,
         "dp": false
     },
     "default": "single_event_per_row.json",
@@ -108,11 +108,11 @@
                 5
             ],
             "sample_len_expand": true,
-            "epochs": 200,
+            "epochs": 40,
             "generator_feature_num_layers": 1,
             "generator_feature_num_units": 100,
             "extra_checkpoint_freq": 10000,
-            "epoch_checkpoint_freq": 100
+            "epoch_checkpoint_freq": 5
         }
     }
 }
