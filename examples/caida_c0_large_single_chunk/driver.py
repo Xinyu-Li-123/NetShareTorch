@@ -40,8 +40,8 @@ if __name__ == '__main__':
     # Please set the `worker_folder` as *absolute path*
     # if you are using Ray with multi-machine setup
     # since Ray has bugs when dealing with relative paths.
-    generator.train(work_folder='../../results/caida_c0_small_1-100', preprocess=True, train=True)
-    generator.generate(work_folder='../../results/caida_c0_small_1-100')
+    generator.train(work_folder='../../results/caida_c0_large_1-100', preprocess=False, train=True)
+    generator.generate(work_folder='../../results/caida_c0_large_1-100')
     # generator.visualize(work_folder='../../results/caida_c0_1-100', port=8056)
     # find available port starting from 8050
     # port = 8056

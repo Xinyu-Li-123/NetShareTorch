@@ -14,8 +14,8 @@ if __name__ == '__main__':
     # Please set the `worker_folder` as *absolute path*
     # if you are using Ray with multi-machine setup
     # since Ray has bugs when dealing with relative paths.
-    generator.train(work_folder=f'../../results/ton_iot', preprocess=False, train=True)
-    generator.generate(work_folder=f'../../results/ton_iot')
-    generator.visualize(work_folder=f'../../results/ton_iot', port=8051)
+    generator.train(work_folder=f'../../results/ton_iot_20000E', preprocess=True, train=True)
+    generator.generate(work_folder=f'../../results/ton_iot_20000E')
+    # generator.visualize(work_folder=f'../../results/ton_iot', port=8051)
 
     ray.shutdown()
