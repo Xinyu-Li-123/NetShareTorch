@@ -1,0 +1,150 @@
+[KeOps] Warning : Cuda libraries were not detected on the system ; using cpu only mode
+Ray is disabled
+NetsharePrePostProcessor._pre_process
+../../traces/ugr16/raw.csv
+dataset type: netflow
+metadata cols: ['srcip', 'dstip', 'srcport', 'dstport', 'proto']
+word2vec cols: ['srcport', 'dstport', 'proto']
+Training Word2Vec model from scratch...
+Word2Vec model is saved at ../../results/ugr16/pre_processed_data/word2vec_vecSize_10.model
+Building annoy dictionary word2vec...
+{'port': ['srcport', 'dstport'], 'proto': ['proto']}
+Finish building Angular trees...
+metadata fields: ['srcip', 'dstip', 'srcport', 'dstport', 'proto']
+timeseries fields: ['td', 'pkt', 'byt', 'type']
+Using fixed_time
+10
+Chunk_id: 0, # of pkts/records: 659
+Chunk_id: 1, # of pkts/records: 1092
+Chunk_id: 2, # of pkts/records: 102214
+Chunk_id: 3, # of pkts/records: 125351
+Chunk_id: 4, # of pkts/records: 127242
+Chunk_id: 5, # of pkts/records: 131047
+Chunk_id: 6, # of pkts/records: 133070
+Chunk_id: 7, # of pkts/records: 130395
+Chunk_id: 8, # of pkts/records: 123788
+Chunk_id: 9, # of pkts/records: 125142
+df_chunk_cnt_validation: 1000000
+Chunk time: 0.0001342635999917984 seconds
+compute flowkey-chunk list from scratch...
+processing chunk 1/10, # of flows: 653
+processing chunk 2/10, # of flows: 1085
+processing chunk 3/10, # of flows: 89308
+processing chunk 4/10, # of flows: 109210
+processing chunk 5/10, # of flows: 109674
+processing chunk 6/10, # of flows: 114892
+processing chunk 7/10, # of flows: 116132
+processing chunk 8/10, # of flows: 113368
+processing chunk 9/10, # of flows: 107063
+processing chunk 10/10, # of flows: 108010
+# of total flows: 793801
+# of total flows (sanity check): 793801
+# of flows cross chunk (of total flows): 48169 (6.068145542774574%)
+# of non-continuous flows: 5153
+chunk_id: 0, max_flow_len: 2
+chunk_id: 1, max_flow_len: 3
+chunk_id: 2, max_flow_len: 30
+chunk_id: 3, max_flow_len: 16
+chunk_id: 4, max_flow_len: 26
+chunk_id: 5, max_flow_len: 24
+chunk_id: 6, max_flow_len: 16
+chunk_id: 7, max_flow_len: 12
+chunk_id: 8, max_flow_len: 15
+chunk_id: 9, max_flow_len: 34
+global max flow len: 34
+Top 10 per-chunk flow length: [18, 19, 24, 25, 25, 26, 26, 27, 30, 34]
+
+Chunk_id: 0
+Before truncation, df_per_chunk: (659, 10)
+After truncation, df_per_chunk: (659, 10)
+df_per_chunk: (659, 170)
+data_attribute: (653, 181), 0.000945544GB in memory
+data_feature: (653, 34, 6), 0.001065696GB in memory
+data_gen_flag: (653, 34), 0.000177616GB in memory
+
+Chunk_id: 1
+Before truncation, df_per_chunk: (1092, 10)
+After truncation, df_per_chunk: (1092, 10)
+df_per_chunk: (1092, 170)
+data_attribute: (1085, 181), 0.00157108GB in memory
+data_feature: (1085, 34, 6), 0.00177072GB in memory
+data_gen_flag: (1085, 34), 0.00029512GB in memory
+
+Chunk_id: 2
+Before truncation, df_per_chunk: (102214, 10)
+After truncation, df_per_chunk: (102214, 10)
+df_per_chunk: (102214, 170)
+data_attribute: (89308, 181), 0.129317984GB in memory
+data_feature: (89308, 34, 6), 0.145750656GB in memory
+data_gen_flag: (89308, 34), 0.024291776GB in memory
+
+Chunk_id: 3
+Before truncation, df_per_chunk: (125351, 10)
+After truncation, df_per_chunk: (125351, 10)
+df_per_chunk: (125351, 170)
+data_attribute: (109210, 181), 0.15813608GB in memory
+data_feature: (109210, 34, 6), 0.17823072GB in memory
+data_gen_flag: (109210, 34), 0.02970512GB in memory
+
+Chunk_id: 4
+Before truncation, df_per_chunk: (127242, 10)
+After truncation, df_per_chunk: (127242, 10)
+df_per_chunk: (127242, 170)
+data_attribute: (109674, 181), 0.158807952GB in memory
+data_feature: (109674, 34, 6), 0.178987968GB in memory
+data_gen_flag: (109674, 34), 0.029831328GB in memory
+
+Chunk_id: 5
+Before truncation, df_per_chunk: (131047, 10)
+After truncation, df_per_chunk: (131047, 10)
+df_per_chunk: (131047, 170)
+data_attribute: (114892, 181), 0.166363616GB in memory
+data_feature: (114892, 34, 6), 0.187503744GB in memory
+data_gen_flag: (114892, 34), 0.031250624GB in memory
+
+Chunk_id: 6
+Before truncation, df_per_chunk: (133070, 10)
+After truncation, df_per_chunk: (133070, 10)
+df_per_chunk: (133070, 170)
+data_attribute: (116132, 181), 0.168159136GB in memory
+data_feature: (116132, 34, 6), 0.189527424GB in memory
+data_gen_flag: (116132, 34), 0.031587904GB in memory
+
+Chunk_id: 7
+Before truncation, df_per_chunk: (130395, 10)
+After truncation, df_per_chunk: (130395, 10)
+df_per_chunk: (130395, 170)
+data_attribute: (113368, 181), 0.164156864GB in memory
+data_feature: (113368, 34, 6), 0.185016576GB in memory
+data_gen_flag: (113368, 34), 0.030836096GB in memory
+
+Chunk_id: 8
+Before truncation, df_per_chunk: (123788, 10)
+After truncation, df_per_chunk: (123788, 10)
+df_per_chunk: (123788, 170)
+data_attribute: (107063, 181), 0.155027224GB in memory
+data_feature: (107063, 34, 6), 0.174726816GB in memory
+data_gen_flag: (107063, 34), 0.029121136GB in memory
+
+Chunk_id: 9
+Before truncation, df_per_chunk: (125142, 10)
+After truncation, df_per_chunk: (125142, 10)
+df_per_chunk: (125142, 170)
+data_attribute: (108010, 181), 0.15639848GB in memory
+data_feature: (108010, 34, 6), 0.17627232GB in memory
+data_gen_flag: (108010, 34), 0.02937872GB in memory
+NetShareManager._train
+Chunk 0 is valid
+Chunk 1 is valid
+Chunk 2 is valid
+Chunk 3 is valid
+Chunk 4 is valid
+Chunk 5 is valid
+Chunk 6 is valid
+Chunk 7 is valid
+Chunk 8 is valid
+Chunk 9 is valid
+Number of valid chunks: 10
+Number of configurations after expanded: 10
+../../results/ugr16/models/chunkid-0/sample_len-5/checkpoint/epoch_id-399.pt
+../../results/ugr16/models/chunkid-0/sample_len-5/checkpoint/epoch_id-199.pt

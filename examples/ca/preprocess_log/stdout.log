@@ -1,0 +1,136 @@
+[KeOps] Warning : Cuda libraries were not detected on the system ; using cpu only mode
+Ray is disabled
+NetsharePrePostProcessor._pre_process
+../../traces/ca/raw.csv
+dataset type: pcap
+metadata cols: ['srcip', 'dstip', 'srcport', 'dstport', 'proto']
+word2vec cols: ['srcport', 'dstport', 'proto']
+Training Word2Vec model from scratch...
+Word2Vec model is saved at ../../results/ca/pre_processed_data/word2vec_vecSize_10.model
+Building annoy dictionary word2vec...
+{'port': ['srcport', 'dstport'], 'proto': ['proto']}
+Finish building Angular trees...
+metadata fields: ['srcip', 'dstip', 'srcport', 'dstport', 'proto']
+timeseries fields: ['pkt_len', 'tos', 'id', 'flag', 'off', 'ttl']
+Using fixed_time
+10
+Chunk_id: 0, # of pkts/records: 89027
+Chunk_id: 1, # of pkts/records: 91675
+Chunk_id: 2, # of pkts/records: 135448
+Chunk_id: 3, # of pkts/records: 91213
+Chunk_id: 4, # of pkts/records: 109571
+Chunk_id: 5, # of pkts/records: 97676
+Chunk_id: 6, # of pkts/records: 93643
+Chunk_id: 7, # of pkts/records: 95058
+Chunk_id: 8, # of pkts/records: 102204
+Chunk_id: 9, # of pkts/records: 94485
+df_chunk_cnt_validation: 1000000
+Chunk time: 55.691 seconds
+compute flowkey-chunk list from scratch...
+processing chunk 1/10, # of flows: 54767
+processing chunk 2/10, # of flows: 54726
+processing chunk 3/10, # of flows: 53427
+processing chunk 4/10, # of flows: 55180
+processing chunk 5/10, # of flows: 54713
+processing chunk 6/10, # of flows: 52702
+processing chunk 7/10, # of flows: 55182
+processing chunk 8/10, # of flows: 55028
+processing chunk 9/10, # of flows: 52909
+processing chunk 10/10, # of flows: 55065
+# of total flows: 539634
+# of total flows (sanity check): 539634
+# of flows cross chunk (of total flows): 3037 (0.5627888531856776%)
+# of non-continuous flows: 86
+chunk_id: 0, max_flow_len: 2926
+chunk_id: 1, max_flow_len: 3168
+chunk_id: 2, max_flow_len: 20376
+chunk_id: 3, max_flow_len: 3292
+chunk_id: 4, max_flow_len: 13748
+chunk_id: 5, max_flow_len: 7818
+chunk_id: 6, max_flow_len: 3300
+chunk_id: 7, max_flow_len: 3330
+chunk_id: 8, max_flow_len: 6577
+chunk_id: 9, max_flow_len: 3300
+global max flow len: 20376
+Top 10 per-chunk flow length: [3330, 3330, 3629, 4032, 6577, 6616, 7818, 13748, 20366, 20376]
+
+Chunk_id: 0
+Before truncation, df_per_chunk: (89027, 15)
+After truncation, df_per_chunk: (89027, 15)
+df_per_chunk: (89027, 176)
+data_attribute: (54767, 181), 0.079302616GB in memory
+data_feature: (54767, 20376, 9), 80.347132224GB in memory
+data_gen_flag: (54767, 20376), 8.927459136GB in memory
+
+Chunk_id: 1
+Before truncation, df_per_chunk: (91675, 15)
+After truncation, df_per_chunk: (91675, 15)
+df_per_chunk: (91675, 176)
+data_attribute: (54726, 181), 0.079243248GB in memory
+data_feature: (54726, 20376, 9), 80.286982272GB in memory
+data_gen_flag: (54726, 20376), 8.920775808GB in memory
+
+Chunk_id: 2
+Before truncation, df_per_chunk: (135448, 15)
+After truncation, df_per_chunk: (135448, 15)
+df_per_chunk: (135448, 176)
+data_attribute: (53427, 181), 0.077362296GB in memory
+data_feature: (53427, 20376, 9), 78.381255744GB in memory
+data_gen_flag: (53427, 20376), 8.709028416GB in memory
+
+Chunk_id: 3
+Before truncation, df_per_chunk: (91213, 15)
+After truncation, df_per_chunk: (91213, 15)
+df_per_chunk: (91213, 176)
+data_attribute: (55180, 181), 0.07990064GB in memory
+data_feature: (55180, 20376, 9), 80.95303296GB in memory
+data_gen_flag: (55180, 20376), 8.99478144GB in memory
+
+Chunk_id: 4
+Before truncation, df_per_chunk: (109571, 15)
+After truncation, df_per_chunk: (109571, 15)
+df_per_chunk: (109571, 176)
+data_attribute: (54713, 181), 0.079224424GB in memory
+data_feature: (54713, 20376, 9), 80.267910336GB in memory
+data_gen_flag: (54713, 20376), 8.918656704GB in memory
+
+Chunk_id: 5
+Before truncation, df_per_chunk: (97676, 15)
+After truncation, df_per_chunk: (97676, 15)
+df_per_chunk: (97676, 176)
+data_attribute: (52702, 181), 0.076312496GB in memory
+data_feature: (52702, 20376, 9), 77.317628544GB in memory
+data_gen_flag: (52702, 20376), 8.590847616GB in memory
+
+Chunk_id: 6
+Before truncation, df_per_chunk: (93643, 15)
+After truncation, df_per_chunk: (93643, 15)
+df_per_chunk: (93643, 176)
+data_attribute: (55182, 181), 0.079903536GB in memory
+data_feature: (55182, 20376, 9), 80.955967104GB in memory
+data_gen_flag: (55182, 20376), 8.995107456GB in memory
+
+Chunk_id: 7
+Before truncation, df_per_chunk: (95058, 15)
+After truncation, df_per_chunk: (95058, 15)
+df_per_chunk: (95058, 176)
+data_attribute: (55028, 181), 0.079680544GB in memory
+data_feature: (55028, 20376, 9), 80.730038016GB in memory
+data_gen_flag: (55028, 20376), 8.970004224GB in memory
+
+Chunk_id: 8
+Before truncation, df_per_chunk: (102204, 15)
+After truncation, df_per_chunk: (102204, 15)
+df_per_chunk: (102204, 176)
+data_attribute: (52909, 181), 0.076612232GB in memory
+data_feature: (52909, 20376, 9), 77.621312448GB in memory
+data_gen_flag: (52909, 20376), 8.624590272GB in memory
+
+Chunk_id: 9
+Before truncation, df_per_chunk: (94485, 15)
+After truncation, df_per_chunk: (94485, 15)
+df_per_chunk: (94485, 176)
+data_attribute: (55065, 181), 0.07973412GB in memory
+data_feature: (55065, 20376, 9), 80.78431968GB in memory
+data_gen_flag: (55065, 20376), 8.97603552GB in memory
+Ray is disabled

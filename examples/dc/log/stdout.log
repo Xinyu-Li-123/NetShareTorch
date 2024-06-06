@@ -1,0 +1,429 @@
+[KeOps] Warning : Cuda libraries were not detected on the system ; using cpu only mode
+Ray is disabled
+NetsharePrePostProcessor._pre_process
+../../traces/dc/raw.csv
+dataset type: pcap
+metadata cols: ['srcip', 'dstip', 'srcport', 'dstport', 'proto']
+word2vec cols: ['srcport', 'dstport', 'proto']
+Training Word2Vec model from scratch...
+Word2Vec model is saved at ../../results/dc/pre_processed_data/word2vec_vecSize_10.model
+Building annoy dictionary word2vec...
+{'port': ['srcport', 'dstport'], 'proto': ['proto']}
+Finish building Angular trees...
+metadata fields: ['srcip', 'dstip', 'srcport', 'dstport', 'proto']
+timeseries fields: ['pkt_len', 'tos', 'id', 'flag', 'off', 'ttl']
+Using fixed_time
+10
+Chunk_id: 0, # of pkts/records: 124909
+Chunk_id: 1, # of pkts/records: 102700
+Chunk_id: 2, # of pkts/records: 61572
+Chunk_id: 3, # of pkts/records: 91667
+Chunk_id: 4, # of pkts/records: 133554
+Chunk_id: 5, # of pkts/records: 87464
+Chunk_id: 6, # of pkts/records: 90840
+Chunk_id: 7, # of pkts/records: 99915
+Chunk_id: 8, # of pkts/records: 86761
+Chunk_id: 9, # of pkts/records: 120618
+df_chunk_cnt_validation: 1000000
+Chunk time: 27.3151535 seconds
+compute flowkey-chunk list from scratch...
+processing chunk 1/10, # of flows: 6880
+processing chunk 2/10, # of flows: 5836
+processing chunk 3/10, # of flows: 6690
+processing chunk 4/10, # of flows: 5439
+processing chunk 5/10, # of flows: 5612
+processing chunk 6/10, # of flows: 5292
+processing chunk 7/10, # of flows: 5430
+processing chunk 8/10, # of flows: 5720
+processing chunk 9/10, # of flows: 5162
+processing chunk 10/10, # of flows: 5527
+# of total flows: 49751
+# of total flows (sanity check): 49751
+# of flows cross chunk (of total flows): 2748 (5.523507065184619%)
+# of non-continuous flows: 435
+chunk_id: 0, max_flow_len: 19469
+chunk_id: 1, max_flow_len: 13606
+chunk_id: 2, max_flow_len: 1435
+chunk_id: 3, max_flow_len: 6270
+chunk_id: 4, max_flow_len: 16147
+chunk_id: 5, max_flow_len: 9114
+chunk_id: 6, max_flow_len: 8488
+chunk_id: 7, max_flow_len: 8863
+chunk_id: 8, max_flow_len: 8459
+chunk_id: 9, max_flow_len: 9272
+global max flow len: 19469
+Top 10 per-chunk flow length: [9114, 9114, 9272, 12250, 12250, 13578, 13606, 16147, 19469, 19469]
+
+Chunk_id: 0
+Before truncation, df_per_chunk: (124909, 14)
+After truncation, df_per_chunk: (124909, 14)
+df_per_chunk: (124909, 175)
+data_attribute: (6880, 181), 0.00996224GB in memory
+data_feature: (6880, 19469, 9), 9.64416384GB in memory
+data_gen_flag: (6880, 19469), 1.07157376GB in memory
+
+Chunk_id: 1
+Before truncation, df_per_chunk: (102700, 14)
+After truncation, df_per_chunk: (102700, 14)
+df_per_chunk: (102700, 175)
+data_attribute: (5836, 181), 0.008450528GB in memory
+data_feature: (5836, 19469, 9), 8.180718048GB in memory
+data_gen_flag: (5836, 19469), 0.908968672GB in memory
+
+Chunk_id: 2
+Before truncation, df_per_chunk: (61572, 14)
+After truncation, df_per_chunk: (61572, 14)
+df_per_chunk: (61572, 175)
+data_attribute: (6690, 181), 0.00968712GB in memory
+data_feature: (6690, 19469, 9), 9.37782792GB in memory
+data_gen_flag: (6690, 19469), 1.04198088GB in memory
+
+Chunk_id: 3
+Before truncation, df_per_chunk: (91667, 14)
+After truncation, df_per_chunk: (91667, 14)
+df_per_chunk: (91667, 175)
+data_attribute: (5439, 181), 0.007875672GB in memory
+data_feature: (5439, 19469, 9), 7.624216152GB in memory
+data_gen_flag: (5439, 19469), 0.847135128GB in memory
+
+Chunk_id: 4
+Before truncation, df_per_chunk: (133554, 14)
+After truncation, df_per_chunk: (133554, 14)
+df_per_chunk: (133554, 175)
+data_attribute: (5612, 181), 0.008126176GB in memory
+data_feature: (5612, 19469, 9), 7.866722016GB in memory
+data_gen_flag: (5612, 19469), 0.874080224GB in memory
+
+Chunk_id: 5
+Before truncation, df_per_chunk: (87464, 14)
+After truncation, df_per_chunk: (87464, 14)
+df_per_chunk: (87464, 175)
+data_attribute: (5292, 181), 0.007662816GB in memory
+data_feature: (5292, 19469, 9), 7.418156256GB in memory
+data_gen_flag: (5292, 19469), 0.824239584GB in memory
+
+Chunk_id: 6
+Before truncation, df_per_chunk: (90840, 14)
+After truncation, df_per_chunk: (90840, 14)
+df_per_chunk: (90840, 175)
+data_attribute: (5430, 181), 0.00786264GB in memory
+data_feature: (5430, 19469, 9), 7.61160024GB in memory
+data_gen_flag: (5430, 19469), 0.84573336GB in memory
+
+Chunk_id: 7
+Before truncation, df_per_chunk: (99915, 14)
+After truncation, df_per_chunk: (99915, 14)
+df_per_chunk: (99915, 175)
+data_attribute: (5720, 181), 0.00828256GB in memory
+data_feature: (5720, 19469, 9), 8.01811296GB in memory
+data_gen_flag: (5720, 19469), 0.89090144GB in memory
+
+Chunk_id: 8
+Before truncation, df_per_chunk: (86761, 14)
+After truncation, df_per_chunk: (86761, 14)
+df_per_chunk: (86761, 175)
+data_attribute: (5162, 181), 0.007474576GB in memory
+data_feature: (5162, 19469, 9), 7.235926416GB in memory
+data_gen_flag: (5162, 19469), 0.803991824GB in memory
+
+Chunk_id: 9
+Before truncation, df_per_chunk: (120618, 14)
+After truncation, df_per_chunk: (120618, 14)
+df_per_chunk: (120618, 175)
+data_attribute: (5527, 181), 0.008003096GB in memory
+data_feature: (5527, 19469, 9), 7.747571736GB in memory
+data_gen_flag: (5527, 19469), 0.860841304GB in memory
+NetShareManager._train
+Chunk 0 is valid
+Chunk 1 is valid
+Chunk 2 is valid
+Chunk 3 is valid
+Chunk 4 is valid
+Chunk 5 is valid
+Chunk 6 is valid
+Chunk 7 is valid
+Chunk 8 is valid
+Chunk 9 is valid
+Number of valid chunks: 10
+Number of configurations after expanded: 10
+[{'dp_noise_multiplier': None, 'dp': False, 'pretrain': True, 'config_ids': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}]
+Config group 0: DP: False, pretrain: True
+Start launching chunk0 experiments...
+DoppelGANgerTorchModel._train
+Currently training with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 1000, 'dataset': '../../results/dc/pre_processed_data/chunkid-0', 'dataset_expand': True, 'sub_result_folder': 'chunkid-0/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-0/sample_len-5', 'restore': False}
+Finish launching chunk0 experiments ...
+Start waiting for other chunks from config_group_id 0 experiments finished ...
+DoppelGANgerTorchModel._train
+Currently training with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-1', 'dataset_expand': True, 'sub_result_folder': 'chunkid-1/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-1/sample_len-5', 'restore': True}
+Load pre-trained model from ../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt...
+DoppelGANgerTorchModel._train
+Currently training with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-2', 'dataset_expand': True, 'sub_result_folder': 'chunkid-2/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-2/sample_len-5', 'restore': True}
+Load pre-trained model from ../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt...
+DoppelGANgerTorchModel._train
+Currently training with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-3', 'dataset_expand': True, 'sub_result_folder': 'chunkid-3/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-3/sample_len-5', 'restore': True}
+Load pre-trained model from ../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt...
+DoppelGANgerTorchModel._train
+Currently training with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-4', 'dataset_expand': True, 'sub_result_folder': 'chunkid-4/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-4/sample_len-5', 'restore': True}
+Load pre-trained model from ../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt...
+DoppelGANgerTorchModel._train
+Currently training with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-5', 'dataset_expand': True, 'sub_result_folder': 'chunkid-5/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-5/sample_len-5', 'restore': True}
+Load pre-trained model from ../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt...
+DoppelGANgerTorchModel._train
+Currently training with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-6', 'dataset_expand': True, 'sub_result_folder': 'chunkid-6/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-6/sample_len-5', 'restore': True}
+Load pre-trained model from ../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt...
+DoppelGANgerTorchModel._train
+Currently training with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-7', 'dataset_expand': True, 'sub_result_folder': 'chunkid-7/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-7/sample_len-5', 'restore': True}
+Load pre-trained model from ../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt...
+DoppelGANgerTorchModel._train
+Currently training with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-8', 'dataset_expand': True, 'sub_result_folder': 'chunkid-8/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-8/sample_len-5', 'restore': True}
+Load pre-trained model from ../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt...
+DoppelGANgerTorchModel._train
+Currently training with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-9', 'dataset_expand': True, 'sub_result_folder': 'chunkid-9/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-9/sample_len-5', 'restore': True}
+Load pre-trained model from ../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt...
+Other chunks from config_group_id 0 training finished
+Chunk 0 is valid
+Chunk 1 is valid
+Chunk 2 is valid
+Chunk 3 is valid
+Chunk 4 is valid
+Chunk 5 is valid
+Chunk 6 is valid
+Chunk 7 is valid
+Chunk 8 is valid
+Chunk 9 is valid
+Number of valid chunks: 10
+Number of configurations after expanded: 10
+Start generating attributes ...
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 1000, 'dataset': '../../results/dc/pre_processed_data/chunkid-0', 'dataset_expand': True, 'sub_result_folder': 'chunkid-0/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-0/sample_len-5', 'restore': False, 'chunk_id': 0, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+Generating w/o given data attribute!
+Processing epoch_id: 999
+generate 1-th sample from epoch_id-999
+Finished loading
+../../results/dc/generated_data/sample_len-5/attr_raw/chunk_id-0.npz
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-1', 'dataset_expand': True, 'sub_result_folder': 'chunkid-1/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-1/sample_len-5', 'restore': True, 'chunk_id': 1, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+Generating w/o given data attribute!
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+../../results/dc/generated_data/sample_len-5/attr_raw/chunk_id-1.npz
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-2', 'dataset_expand': True, 'sub_result_folder': 'chunkid-2/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-2/sample_len-5', 'restore': True, 'chunk_id': 2, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+Generating w/o given data attribute!
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+../../results/dc/generated_data/sample_len-5/attr_raw/chunk_id-2.npz
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-3', 'dataset_expand': True, 'sub_result_folder': 'chunkid-3/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-3/sample_len-5', 'restore': True, 'chunk_id': 3, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+Generating w/o given data attribute!
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+../../results/dc/generated_data/sample_len-5/attr_raw/chunk_id-3.npz
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-4', 'dataset_expand': True, 'sub_result_folder': 'chunkid-4/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-4/sample_len-5', 'restore': True, 'chunk_id': 4, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+Generating w/o given data attribute!
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+../../results/dc/generated_data/sample_len-5/attr_raw/chunk_id-4.npz
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-5', 'dataset_expand': True, 'sub_result_folder': 'chunkid-5/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-5/sample_len-5', 'restore': True, 'chunk_id': 5, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+Generating w/o given data attribute!
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+../../results/dc/generated_data/sample_len-5/attr_raw/chunk_id-5.npz
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-6', 'dataset_expand': True, 'sub_result_folder': 'chunkid-6/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-6/sample_len-5', 'restore': True, 'chunk_id': 6, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+Generating w/o given data attribute!
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+../../results/dc/generated_data/sample_len-5/attr_raw/chunk_id-6.npz
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-7', 'dataset_expand': True, 'sub_result_folder': 'chunkid-7/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-7/sample_len-5', 'restore': True, 'chunk_id': 7, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+Generating w/o given data attribute!
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+../../results/dc/generated_data/sample_len-5/attr_raw/chunk_id-7.npz
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-8', 'dataset_expand': True, 'sub_result_folder': 'chunkid-8/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-8/sample_len-5', 'restore': True, 'chunk_id': 8, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+Generating w/o given data attribute!
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+../../results/dc/generated_data/sample_len-5/attr_raw/chunk_id-8.npz
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-9', 'dataset_expand': True, 'sub_result_folder': 'chunkid-9/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-9/sample_len-5', 'restore': True, 'chunk_id': 9, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+Generating w/o given data attribute!
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+../../results/dc/generated_data/sample_len-5/attr_raw/chunk_id-9.npz
+Finish generating attributes
+Start merging attributes ...
+chunk0 config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 1000, 'dataset': '../../results/dc/pre_processed_data/chunkid-0', 'dataset_expand': True, 'sub_result_folder': 'chunkid-0/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-0/sample_len-5', 'restore': False, 'chunk_id': 0, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': False}
+bit_idx_flagstart: 158
+n_flows_startFromThisEpoch / total flows: 3226/6880
+n_flows_startFromThisEpoch / total flows: 3073/5836
+n_flows_startFromThisEpoch / total flows: 3817/6690
+n_flows_startFromThisEpoch / total flows: 2537/5439
+n_flows_startFromThisEpoch / total flows: 2213/5612
+n_flows_startFromThisEpoch / total flows: 2304/5292
+n_flows_startFromThisEpoch / total flows: 2135/5430
+n_flows_startFromThisEpoch / total flows: 2688/5720
+n_flows_startFromThisEpoch / total flows: 2497/5162
+n_flows_startFromThisEpoch / total flows: 3131/5527
+Saving merged attrs...
+chunk 0: 3226 flows
+chunk 1: 3232 flows
+chunk 2: 4184 flows
+chunk 3: 2774 flows
+chunk 4: 2806 flows
+chunk 5: 2863 flows
+chunk 6: 2662 flows
+chunk 7: 3246 flows
+chunk 8: 3204 flows
+chunk 9: 3755 flows
+n_merged_attrs: 31952
+Finish merging attributes...
+Start generating features given attributes ...
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 1000, 'dataset': '../../results/dc/pre_processed_data/chunkid-0', 'dataset_expand': True, 'sub_result_folder': 'chunkid-0/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-0/sample_len-5', 'restore': False, 'chunk_id': 0, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': True}
+Generating from a given data attribute!
+Processing epoch_id: 999
+generate 1-th sample from epoch_id-999
+Finished loading
+Processing epoch_id: 899
+generate 1-th sample from epoch_id-899
+Finished loading
+Processing epoch_id: 799
+generate 1-th sample from epoch_id-799
+Finished loading
+Processing epoch_id: 699
+generate 1-th sample from epoch_id-699
+Finished loading
+Processing epoch_id: 599
+generate 1-th sample from epoch_id-599
+Finished loading
+Processing epoch_id: 499
+generate 1-th sample from epoch_id-499
+Finished loading
+Processing epoch_id: 399
+generate 1-th sample from epoch_id-399
+Finished loading
+Processing epoch_id: 299
+generate 1-th sample from epoch_id-299
+Finished loading
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+Processing epoch_id: 99
+generate 1-th sample from epoch_id-99
+Finished loading
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-1', 'dataset_expand': True, 'sub_result_folder': 'chunkid-1/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-1/sample_len-5', 'restore': True, 'chunk_id': 1, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': True}
+Generating from a given data attribute!
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+Processing epoch_id: 99
+generate 1-th sample from epoch_id-99
+Finished loading
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-2', 'dataset_expand': True, 'sub_result_folder': 'chunkid-2/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-2/sample_len-5', 'restore': True, 'chunk_id': 2, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': True}
+Generating from a given data attribute!
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+Processing epoch_id: 99
+generate 1-th sample from epoch_id-99
+Finished loading
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-3', 'dataset_expand': True, 'sub_result_folder': 'chunkid-3/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-3/sample_len-5', 'restore': True, 'chunk_id': 3, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': True}
+Generating from a given data attribute!
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+Processing epoch_id: 99
+generate 1-th sample from epoch_id-99
+Finished loading
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-4', 'dataset_expand': True, 'sub_result_folder': 'chunkid-4/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-4/sample_len-5', 'restore': True, 'chunk_id': 4, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': True}
+Generating from a given data attribute!
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+Processing epoch_id: 99
+generate 1-th sample from epoch_id-99
+Finished loading
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-5', 'dataset_expand': True, 'sub_result_folder': 'chunkid-5/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-5/sample_len-5', 'restore': True, 'chunk_id': 5, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': True}
+Generating from a given data attribute!
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+Processing epoch_id: 99
+generate 1-th sample from epoch_id-99
+Finished loading
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-6', 'dataset_expand': True, 'sub_result_folder': 'chunkid-6/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-6/sample_len-5', 'restore': True, 'chunk_id': 6, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': True}
+Generating from a given data attribute!
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+Processing epoch_id: 99
+generate 1-th sample from epoch_id-99
+Finished loading
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-7', 'dataset_expand': True, 'sub_result_folder': 'chunkid-7/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-7/sample_len-5', 'restore': True, 'chunk_id': 7, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': True}
+Generating from a given data attribute!
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+Processing epoch_id: 99
+generate 1-th sample from epoch_id-99
+Finished loading
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-8', 'dataset_expand': True, 'sub_result_folder': 'chunkid-8/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-8/sample_len-5', 'restore': True, 'chunk_id': 8, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': True}
+Generating from a given data attribute!
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+Processing epoch_id: 99
+generate 1-th sample from epoch_id-99
+Finished loading
+DoppelGANgerTorchModel._generate
+Currently generating with config: {'overwrite': True, 'original_data_file': '../../traces/dc/raw.csv', 'dataset_type': 'pcap', 'n_chunks': 10, 'dp': False, 'allowed_data_types': ['ip_string', 'integer', 'float', 'string'], 'allowed_data_encodings': ['categorical', 'bit', 'word2vec_port', 'word2vec_proto'], 'pretrain_dir': '../../results/dc/models/chunkid-0/sample_len-5/checkpoint/epoch_id-999.pt', 'skip_chunk0_train': False, 'pretrain_non_dp': True, 'pretrain_non_dp_reduce_time': 4.0, 'pretrain_dp': False, 'run': 0, 'batch_size': 40, 'sample_len': 5, 'sample_len_expand': True, 'iteration': 200000, 'vis_freq': 100000, 'vis_num_sample': 5, 'd_rounds': 5, 'g_rounds': 1, 'num_packing': 1, 'noise': True, 'attr_noise_type': 'normal', 'feature_noise_type': 'normal', 'rnn_mlp_num_layers': 0, 'feed_back': False, 'g_lr': 0.0001, 'g_beta1': 0.5, 'd_lr': 0.0001, 'd_beta1': 0.5, 'd_gp_coe': 10.0, 'adam_eps': 1e-08, 'adam_amsgrad': False, 'generator_feature_num_layers': 1, 'generator_feature_num_units': 100, 'generator_attribute_num_layers': 5, 'generator_attribute_num_units': 512, 'discriminator_num_layers': 5, 'discriminator_num_units': 512, 'initial_state': 'random', 'leaky_relu': False, 'attr_d_lr': 0.0001, 'attr_d_beta1': 0.5, 'attr_d_gp_coe': 10.0, 'g_attr_d_coe': 1.0, 'attr_discriminator_num_layers': 5, 'attr_discriminator_num_units': 512, 'use_attr_discriminator': True, 'self_norm': False, 'fix_feature_network': False, 'debug': False, 'combined_disc': True, 'use_gt_lengths': False, 'use_uniform_lengths': False, 'num_cores': None, 'sn_mode': None, 'scale': 1.0, 'extra_checkpoint_freq': 10000, 'epoch_checkpoint_freq': 100, 'dp_noise_multiplier': None, 'dp_l2_norm_clip': None, 'use_adaptive_rolling': False, 'attribute_latent_dim': 5, 'feature_latent_dim': 5, 'epochs': 250, 'dataset': '../../results/dc/pre_processed_data/chunkid-9', 'dataset_expand': True, 'sub_result_folder': 'chunkid-9/sample_len-5', 'result_folder': '../../results/dc/models/chunkid-9/sample_len-5', 'restore': True, 'chunk_id': 9, 'eval_root_folder': '../../results/dc/generated_data/sample_len-5', 'given_data_attribute_flag': True}
+Generating from a given data attribute!
+Processing epoch_id: 199
+generate 1-th sample from epoch_id-199
+Finished loading
+Processing epoch_id: 99
+generate 1-th sample from epoch_id-99
+Finished loading
+Finish generating features given attributes ...
+NetsharePrePostProcessor._post_process
+Config group #0: {'dp_noise_multiplier': None, 'dp': False, 'pretrain': True, 'config_ids': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}
+Chunk_id: 0, # of syn dfs: 10, best_syndf: epoch_id-699.csv
+Chunk_id: 1, # of syn dfs: 2, best_syndf: epoch_id-199.csv
+Chunk_id: 2, # of syn dfs: 2, best_syndf: epoch_id-99.csv
+Chunk_id: 3, # of syn dfs: 2, best_syndf: epoch_id-199.csv
+Chunk_id: 4, # of syn dfs: 2, best_syndf: epoch_id-99.csv
+Chunk_id: 5, # of syn dfs: 2, best_syndf: epoch_id-99.csv
+Chunk_id: 6, # of syn dfs: 2, best_syndf: epoch_id-199.csv
+Chunk_id: 7, # of syn dfs: 2, best_syndf: epoch_id-199.csv
+Chunk_id: 8, # of syn dfs: 2, best_syndf: epoch_id-199.csv
+Chunk_id: 9, # of syn dfs: 2, best_syndf: epoch_id-199.csv
+Average truncation ratio: 0.7950918611097625
+Big syndf shape: (449185, 12)
+
+Aggregated final dataset syndf
+None (449185, 12)
+best_syn_df filename: ../../results/dc/post_processed_data/syn_df,dp_noise_multiplier-None,truncate-per_chunk,id-1.csv
+Generated data is at ../../results/dc/post_processed_data
+Ray is disabled

@@ -24,7 +24,14 @@ gen: 1 layer, 512 unit
 sample_len - time per epoch
     5: 1h
 """
+import torch
 
+print("Is cuda available: {}".format(torch.cuda.is_available()))
+
+exit(0)
+
+# a = 3/0
+# print("Test: Intentional error of division by zero should be raised here")
 if __name__ == '__main__':
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
 

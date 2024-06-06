@@ -1,6 +1,6 @@
 {
     "global_config": {
-        "original_data_file": "../../traces/ca/raw.pcap",
+        "original_data_file": "../../traces/ca/raw.csv",
         "overwrite": true,
         "dataset_type": "pcap",
         "n_chunks": 10,
@@ -114,14 +114,14 @@
     "model": {
         "class": "DoppelGANgerTorchModel",
         "config": {
-            "batch_size": 1024,
+            "batch_size": 90,
             "sample_len": [
                 5
             ],
             "sample_len_expand": true,
-            "epochs": 50,
+            "epochs": 200,
             "extra_checkpoint_freq": 10000,
-            "epoch_checkpoint_freq": 10
+            "epoch_checkpoint_freq": 25
         }
     }
 }

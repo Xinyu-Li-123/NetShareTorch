@@ -11,7 +11,7 @@
         "class": "NetShareManager",
         "config": {
             "pretrain_dir": null,
-            "skip_chunk0_train": true,
+            "skip_chunk0_train": false,
             "pretrain_non_dp": true,
             "pretrain_non_dp_reduce_time": 4.0,
             "pretrain_dp": false,

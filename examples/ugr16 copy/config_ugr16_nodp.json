@@ -1,0 +1,107 @@
+{
+    "global_config": {
+        "original_data_file": "../../traces/ugr16/raw.csv",
+        "overwrite": true,
+        "dataset_type": "netflow",
+        "n_chunks": 10,
+        "dp": false
+    },
+    "default": "single_event_per_row.json",
+    "model_manager": {
+        "class": "NetShareManager",
+        "config": {
+            "pretrain_dir": null,
+            "skip_chunk0_train": false,
+            "pretrain_non_dp": true,
+            "pretrain_non_dp_reduce_time": 4.0,
+            "pretrain_dp": false,
+            "run": 0
+        }
+    },
+    "pre_post_processor": {
+        "class": "NetsharePrePostProcessor",
+        "config": {
+            "timestamp": {
+                "column": "ts",
+                "generation": true,
+                "encoding": "interarrival",
+                "normalization": "ZERO_ONE"
+            },
+            "word2vec": {
+                "vec_size": 10,
+                "model_name": "word2vec_vecSize",
+                "annoy_n_trees": 100,
+                "pretrain_model_path": null
+            },
+            "metadata": [
+                {
+                    "column": "srcip",
+                    "type": "integer",
+                    "encoding": "bit",
+                    "n_bits": 32,
+                    "categorical_mapping": false
+                },
+                {
+                    "column": "dstip",
+                    "type": "integer",
+                    "encoding": "bit",
+                    "n_bits": 32,
+                    "categorical_mapping": false
+                },
+                {
+                    "column": "srcport",
+                    "type": "integer",
+                    "encoding": "word2vec_port"
+                },
+                {
+                    "column": "dstport",
+                    "type": "integer",
+                    "encoding": "word2vec_port"
+                },
+                {
+                    "column": "proto",
+                    "type": "string",
+                    "encoding": "word2vec_proto"
+                }
+            ],
+            "timeseries": [
+                {
+                    "column": "td",
+                    "type": "float",
+                    "normalization": "ZERO_ONE",
+                    "log1p_norm": true
+                },
+                {
+                    "column": "pkt",
+                    "type": "float",
+                    "normalization": "ZERO_ONE",
+                    "log1p_norm": true
+                },
+                {
+                    "column": "byt",
+                    "type": "float",
+                    "normalization": "ZERO_ONE",
+                    "log1p_norm": true
+                },
+                {
+                    "column": "type",
+                    "type": "string",
+                    "encoding": "categorical"
+                }
+            ]
+        }
+    },
+    "model": {
+        "class": "DoppelGANgerTorchModel",
+        "config": {
+            "batch_size": 1024,
+            "sample_len": [
+                5
+            ],
+            "sample_len_expand": true,
+            "epochs": 1000,
+            "extra_checkpoint_freq": 50000,
+            "epoch_checkpoint_freq": 200
+        }
+    }
+}

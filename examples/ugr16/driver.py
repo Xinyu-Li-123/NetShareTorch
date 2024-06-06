@@ -14,8 +14,9 @@ if __name__ == '__main__':
     # Please set the `worker_folder` as *absolute path*
     # if you are using Ray with multi-machine setup
     # since Ray has bugs when dealing with relative paths.
-    # generator.train(work_folder=f'results/ugr16', preprocess=False)
-    # generator.generate(work_folder=f'../../results/ugr16')
-    generator.visualize(work_folder=f'../../results/ugr16')
+    # 790k flows, 500 epoch (cmp. CAIDA 90k flows, 1000 epoch)
+    generator.train(work_folder=f'../../results/ugr16', preprocess=False, train=True)
+    generator.generate(work_folder=f'../../results/ugr16')
+    # generator.visualize(work_folder=f'../../results/ugr16')
 
     ray.shutdown()

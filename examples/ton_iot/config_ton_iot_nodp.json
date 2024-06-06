@@ -1,6 +1,6 @@
 {
     "global_config": {
-        "original_data_file": "../../../NTA/data/ton_iot/normal_1.csv",
+        "original_data_file": "../../traces/ton_iot/normal_1.csv",
         "overwrite": true,
         "dataset_type": "pcap",
         "n_chunks": 10,
